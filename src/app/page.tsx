@@ -187,8 +187,13 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="container mx-auto px-4 py-20 text-center">
+      <section className="relative overflow-hidden bg-gradient-to-br from-background via-muted/10 to-primary/5">
+        {/* Background decoration */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/5"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-primary/5 rounded-full blur-2xl animate-float"></div>
+        
+        <div className="container mx-auto px-4 py-20 text-center relative z-10">
           <div className="mx-auto max-w-4xl">
             <ScrollReveal direction="up">
               <Badge variant="secondary" className="mb-4 bg-primary/10 text-primary border-primary/20 shadow-glow animate-glow glass-card">
