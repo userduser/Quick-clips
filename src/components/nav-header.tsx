@@ -15,6 +15,7 @@ import { Avatar, AvatarFallback } from "./ui/avatar";
 import { signOut } from "next-auth/react";
 import { useEffect } from "react";
 import { toast } from "sonner";
+import QuickClipsLogo from "./logo";
 
 const NavHeader = ({ credits, email }: { credits: number; email: string }) => {
   return (
