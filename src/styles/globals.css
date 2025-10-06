@@ -16,13 +16,14 @@
   --popover: #1a1a1a;
   --popover-foreground: #f5f5f5;
   --primary: #f56800;
-  --primary-foreground: #ffffff;
+  --primary-dark: #cc5500;
+  --primary-foreground: #000000;
   --secondary: #2a1810;
   --secondary-foreground: #f5f5f5;
   --muted: #262626;
   --muted-foreground: #a3a3a3;
   --accent: #f56800;
-  --accent-foreground: #ffffff;
+  --accent-foreground: #000000;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
   --border: #333333;
