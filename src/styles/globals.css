@@ -255,6 +255,20 @@
       inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
   
+  /* Orange gradient utility for solid orange elements */
+  .bg-primary {
+    background: linear-gradient(135deg, #f56800 0%, #cc5500 100%);
+  }
+  
+  .bg-gradient-orange {
+    background: linear-gradient(135deg, #f56800 0%, #cc5500 100%);
+  }
+  
+  /* Override any solid orange backgrounds with gradients */
+  [class*="bg-primary"]:not([class*="bg-primary/"]):not([class*="bg-primary-"]) {
+    background: linear-gradient(135deg, #f56800 0%, #cc5500 100%) !important;
+  }
+  
   .glass-card-hover {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
