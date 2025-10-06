@@ -206,6 +206,39 @@
   }
   body {
     @apply bg-background text-foreground;
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(245, 104, 0, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(245, 104, 0, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(245, 104, 0, 0.02) 0%, transparent 70%),
+      linear-gradient(135deg, #0a0a0a 0%, #0f0f0f 50%, #0a0a0a 100%);
+    background-attachment: fixed;
+  }
+  
+  /* Global shadow utilities */
+  .shadow-glow {
+    box-shadow: 0 0 30px rgba(245, 104, 0, 0.2), 0 0 60px rgba(245, 104, 0, 0.1);
+  }
+  
+  .shadow-card {
+    box-shadow: 
+      0 20px 25px -5px rgba(0, 0, 0, 0.4),
+      0 10px 10px -5px rgba(0, 0, 0, 0.2),
+      0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+  
+  .gradient-border {
+    position: relative;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    background: linear-gradient(135deg, #f56800, #ff8533, #f56800);
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
   }
 }
 
