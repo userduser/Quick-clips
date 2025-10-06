@@ -299,7 +299,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
             <ScrollReveal direction="left" delay={0}>
               <div className="text-center">
-                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground text-2xl font-bold shadow-glow animate-float gradient-border">
+                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-orange text-black text-2xl font-bold shadow-glow animate-float gradient-border">
                   1
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Upload Your Video</h3>
