@@ -69,8 +69,10 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-32 h-32 rounded-full bg-primary/10 mb-6">
-                <span className="text-6xl">🚀</span>
+              <div className="inline-flex items-center justify-center w-32 h-32 rounded-full bg-primary/10 mb-6 glass-card glow-orange animate-float">
+                <svg className="w-16 h-16 text-primary animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
               </div>
               <h3 className="text-2xl font-semibold mb-4">Accelerating Creator Success</h3>
               <p className="text-muted-foreground">
