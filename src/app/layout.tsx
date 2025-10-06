@@ -25,7 +25,10 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  icons: [
+    { rel: "icon", url: "/favicon.svg", type: "image/svg+xml" },
+    { rel: "shortcut icon", url: "/favicon.svg" }
+  ],
 };
 
 const geist = Geist({
