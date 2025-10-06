@@ -66,11 +66,14 @@ export function LoginForm({
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
+      <div className="flex justify-center mb-6">
+        <QuickClipsLogo href="/" />
+      </div>
       <Card>
-        <CardHeader>
-          <CardTitle className="text-2xl">Login</CardTitle>
+        <CardHeader className="text-center">
+          <CardTitle className="text-2xl">Welcome back</CardTitle>
           <CardDescription>
-            Enter your email below to log in to your account
+            Sign in to your Quick Clips account
           </CardDescription>
         </CardHeader>
         <CardContent>
