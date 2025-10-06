@@ -76,8 +76,8 @@ const features = [
     title: "AI-Powered Clip Detection",
     description: "Our advanced AI analyzes your long-form content to identify the most engaging moments automatically.",
     icon: (
-      <div className="animate-pulse">
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="transition-transform duration-500 hover:scale-110">
+        <svg className="w-8 h-8 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014.846 17H9.154a3.374 3.374 0 00-1.849-.547l-.548-.547z" />
         </svg>
       </div>
@@ -87,8 +87,8 @@ const features = [
     title: "Smart Framing & Cropping", 
     description: "Automatically crops videos to focus on speakers with perfect 9:16 vertical framing for social media.",
     icon: (
-      <div className="animate-bounce">
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="transition-transform duration-500 hover:scale-110">
+        <svg className="w-8 h-8 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
         </svg>
       </div>
@@ -98,8 +98,8 @@ const features = [
     title: "Auto-Generated Captions",
     description: "Accurate subtitles are generated and styled automatically, making your content accessible and engaging.",
     icon: (
-      <div className="animate-pulse">
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="transition-transform duration-500 hover:scale-110">
+        <svg className="w-8 h-8 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
         </svg>
       </div>
@@ -109,8 +109,8 @@ const features = [
     title: "Multi-Platform Export",
     description: "Export optimized clips for YouTube Shorts, TikTok, Instagram Reels, and other social platforms.",
     icon: (
-      <div className="animate-spin-slow">
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="transition-transform duration-500 hover:scale-110">
+        <svg className="w-8 h-8 animate-spin-slow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
         </svg>
       </div>
@@ -120,8 +120,8 @@ const features = [
     title: "Lightning Fast Processing",
     description: "Upload multiple videos and let our AI create dozens of clips simultaneously to save you hours.",
     icon: (
-      <div className="animate-bounce">
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="transition-transform duration-500 hover:scale-110">
+        <svg className="w-8 h-8 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       </div>
@@ -131,8 +131,8 @@ const features = [
     title: "Brand Customization",
     description: "Add your logos, custom colors, and branding elements to maintain consistent visual identity.",
     icon: (
-      <div className="animate-float">
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="transition-transform duration-500 hover:scale-110">
+        <svg className="w-8 h-8 animate-float" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h2a4 4 0 004-4V5z" />
         </svg>
       </div>
