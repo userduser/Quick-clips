@@ -411,7 +411,7 @@ export default function HomePage() {
                       asChild 
                       className={`w-full transition-all duration-300 ${
                         plan.isPopular 
-                          ? "shadow-glow hover:shadow-card gradient-border" 
+                          ? "bg-gradient-orange text-black shadow-glow hover:shadow-card gradient-border" 
                           : "glass-card-hover shadow-card"
                       }`}
                       variant={plan.isPopular ? "default" : "outline"}
