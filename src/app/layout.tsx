@@ -4,8 +4,27 @@ import { type Metadata } from "next";
 import { Geist } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Podcast Clipper",
-  description: "Podcast Clipper",
+  title: "Quick Clips - AI Video Clipper",
+  description: "Turn long videos into viral clips in minutes with AI. Smart framing, auto-captions, and ready-to-post content for social media.",
+  keywords: "AI video clipper, video editing, social media clips, auto-captions, viral clips, video repurposing",
+  authors: [{ name: "Quick Clips" }],
+  metadataBase: new URL("https://quickclips.pro"),
+  openGraph: {
+    title: "Quick Clips - AI Video Clipper",
+    description: "Turn long videos into viral clips in minutes with AI",
+    url: "https://quickclips.pro",
+    siteName: "Quick Clips",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Quick Clips - AI Video Clipper",
+    description: "Turn long videos into viral clips in minutes with AI",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
@@ -18,8 +37,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geist.variable}`}>
-      <body>{children}</body>
+    <html lang="en" className={`${geist.variable} dark`}>
+      <body className="min-h-screen bg-background font-sans antialiased">
+        {children}
+      </body>
     </html>
   );
 }
