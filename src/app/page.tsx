@@ -311,7 +311,7 @@ export default function HomePage() {
             
             <ScrollReveal direction="up" delay={200}>
               <div className="text-center">
-                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground text-2xl font-bold shadow-glow animate-float gradient-border" style={{ animationDelay: '2s' }}>
+                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-orange text-black text-2xl font-bold shadow-glow animate-float gradient-border" style={{ animationDelay: '2s' }}>
                   2
                 </div>
                 <h3 className="text-xl font-semibold mb-3">AI Analyzes & Clips</h3>
