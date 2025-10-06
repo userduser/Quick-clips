@@ -178,7 +178,7 @@ export default function HomePage() {
               </Button>
             </ScrollReveal>
             <ScrollReveal direction="right" delay={200}>
-              <Button asChild className="shadow-glow hover:shadow-card transition-all duration-300 gradient-border">
+              <Button asChild className="bg-gradient-orange text-black shadow-glow hover:shadow-card transition-all duration-300 gradient-border">
                 <Link href="/signup">Get Started</Link>
               </Button>
             </ScrollReveal>
