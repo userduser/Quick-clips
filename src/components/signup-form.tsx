@@ -69,11 +69,14 @@ export function SignupForm({
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
+      <div className="flex justify-center mb-6">
+        <QuickClipsLogo href="/" />
+      </div>
       <Card>
-        <CardHeader>
-          <CardTitle className="text-2xl">Sign up</CardTitle>
+        <CardHeader className="text-center">
+          <CardTitle className="text-2xl">Get started today</CardTitle>
           <CardDescription>
-            Enter your email below to sign up to your account
+            Create your Quick Clips account and start making viral clips
           </CardDescription>
         </CardHeader>
         <CardContent>
