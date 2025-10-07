@@ -11,22 +11,22 @@ export const env = createEnv({
       process.env.NODE_ENV === "production"
         ? z.string()
         : z.string().optional(),
-    DATABASE_URL: z.string().url(),
+    DATABASE_URL: z.string().url().optional(),
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
-    AWS_ACCESS_KEY_ID: z.string(),
-    AWS_SECRET_ACCESS_KEY: z.string(),
-    AWS_REGION: z.string(),
-    S3_BUCKET_NAME: z.string(),
-    PROCESS_VIDEO_ENDPOINT: z.string(),
-    PROCESS_VIDEO_ENDPOINT_AUTH: z.string(),
-    STRIPE_SECRET_KEY: z.string(),
-    STRIPE_SMALL_CREDIT_PACK: z.string(),
-    STRIPE_MEDIUM_CREDIT_PACK: z.string(),
-    STRIPE_LARGE_CREDIT_PACK: z.string(),
-    BASE_URL: z.string(),
-    STRIPE_WEBHOOK_SECRET: z.string(),
+    AWS_ACCESS_KEY_ID: z.string().optional(),
+    AWS_SECRET_ACCESS_KEY: z.string().optional(),
+    AWS_REGION: z.string().optional(),
+    S3_BUCKET_NAME: z.string().optional(),
+    PROCESS_VIDEO_ENDPOINT: z.string().optional(),
+    PROCESS_VIDEO_ENDPOINT_AUTH: z.string().optional(),
+    STRIPE_SECRET_KEY: z.string().optional(),
+    STRIPE_SMALL_CREDIT_PACK: z.string().optional(),
+    STRIPE_MEDIUM_CREDIT_PACK: z.string().optional(),
+    STRIPE_LARGE_CREDIT_PACK: z.string().optional(),
+    BASE_URL: z.string().optional(),
+    STRIPE_WEBHOOK_SECRET: z.string().optional(),
   },
 
   /**
