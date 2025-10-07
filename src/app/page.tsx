@@ -241,11 +241,14 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 relative bg-gradient-to-b from-background to-muted/5">
-        {/* Background decoration */}
+      <section id="features" className="py-20 relative bg-gradient-to-b from-background via-primary/[0.02] to-muted/10">
+        {/* Enhanced Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 via-transparent to-primary/10"></div>
         <div className="absolute top-0 right-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/8 rounded-full blur-2xl animate-float"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-primary/[0.03] to-transparent rounded-full blur-3xl animate-spin-slow"></div>
+        <div className="absolute top-20 left-20 w-32 h-32 bg-primary/10 rounded-full blur-xl animate-bounce opacity-20"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 bg-primary/15 rounded-full blur-lg animate-float opacity-30"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal direction="up">
