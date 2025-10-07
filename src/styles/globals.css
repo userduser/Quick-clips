@@ -336,4 +336,12 @@
   .animate-spin-slow {
     animation: spin-slow 20s linear infinite;
   }
+  
+  .animate-bounce {
+    animation: bounce 1s infinite;
+  }
+  
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
 }
