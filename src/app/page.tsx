@@ -207,7 +207,7 @@ export default function HomePage() {
             <ScrollReveal direction="up" delay={200}>
               <h1 className="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
                 Turn Long Videos Into{" "}
-                <span className="bg-gradient-to-r from-primary via-orange-400 to-primary bg-clip-text text-transparent shadow-glow">
+                <span className="bg-gradient-to-r from-primary via-orange-400 to-primary bg-clip-text text-transparent">
                   Viral Clips
                 </span>
               </h1>
