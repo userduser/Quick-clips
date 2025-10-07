@@ -275,6 +275,14 @@
       inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
   
+  /* Fix for gradient text rendering */
+  .bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+  }
+  
   /* Orange gradient utility for solid orange elements */
   .bg-primary {
     background: linear-gradient(135deg, #f56800 0%, #cc5500 100%);
