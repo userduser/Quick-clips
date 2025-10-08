@@ -10,11 +10,11 @@ interface LogoProps {
 
 const QuickClipsLogo = ({ variant = "full", className = "", href = "/" }: LogoProps) => {
   const LogoContent = () => (
-    <div className={`flex items-center ${className}`}>
+    <div className={`flex items-center mt-[8px] ${className}`}>
       {/* Q Logo SVG with orange color */}
       <svg 
-        width="32" 
-        height="45" 
+        width="23" 
+        height="auto" 
         viewBox="0 0 149 208" 
         className="flex-shrink-0"
         style={{ overflow: 'visible' }}
@@ -27,7 +27,7 @@ const QuickClipsLogo = ({ variant = "full", className = "", href = "/" }: LogoPr
       
       {/* Text part - only show if variant is full */}
       {variant === "full" && (
-        <span className="ml-2 text-xl font-bold tracking-tight">
+        <span className="ml-[-0.5px] text-[20px] font-bold tracking-tight">
           <span className="text-primary">uick</span>
           <span className="text-foreground ml-1">clips</span>
         </span>

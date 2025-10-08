@@ -149,7 +149,7 @@ export default function HomePage() {
           <ScrollReveal direction="left">
             <QuickClipsLogo />
           </ScrollReveal>
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-6 left-1/2 -translate-x-1/2 absolute">
             <ScrollReveal direction="up" delay={100}>
               <Link href="#features" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-300">
                 Features
