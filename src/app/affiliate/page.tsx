@@ -98,10 +98,10 @@ export default function AffiliatePage() {
             </Link>
           </nav>
           <div className="flex items-center gap-3">
-            <Button asChild variant="ghost">
+            <Button asChild variant="ghost" className="btn-ghost">
               <Link href="/login">Sign In</Link>
             </Button>
-            <Button asChild>
+            <Button asChild className="btn-primary">
               <Link href="/signup">Get Started</Link>
             </Button>
           </div>
@@ -122,10 +122,10 @@ export default function AffiliatePage() {
             Join thousands of affiliates already earning with Quick Clips.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button asChild size="lg" className="h-12 px-8 text-base">
+            <Button asChild size="lg" className="h-12 px-8 text-base btn-primary">
               <Link href="/signup">Apply Now</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base">
+            <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base btn-secondary">
               <Link href="#how-it-works">Learn More</Link>
             </Button>
           </div>
@@ -218,7 +218,7 @@ export default function AffiliatePage() {
                 <CardFooter>
                   <Button 
                     asChild 
-                    className="w-full" 
+                    className={`w-full ${tier.isPopular ? "btn-primary" : "btn-secondary"}`}
                     variant={tier.isPopular ? "default" : "outline"}
                   >
                     <Link href="/signup">Apply for {tier.title}</Link>
@@ -410,10 +410,10 @@ export default function AffiliatePage() {
             Join our affiliate program today and start earning recurring commissions from Quick Clips referrals.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button asChild size="lg" className="h-12 px-8 text-base">
+            <Button asChild size="lg" className="h-12 px-8 text-base btn-primary">
               <Link href="/signup">Apply Now - It's Free</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base">
+            <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base btn-secondary">
               <Link href="/contact">Questions? Contact Us</Link>
             </Button>
           </div>

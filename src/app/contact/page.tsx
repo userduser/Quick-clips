@@ -25,10 +25,10 @@ export default function ContactPage() {
             </Link>
           </nav>
           <div className="flex items-center gap-3">
-            <Button asChild variant="ghost">
+            <Button asChild variant="ghost" className="btn-ghost">
               <Link href="/login">Sign In</Link>
             </Button>
-            <Button asChild>
+            <Button asChild className="btn-primary">
               <Link href="/signup">Get Started</Link>
             </Button>
           </div>
@@ -61,7 +61,7 @@ export default function ContactPage() {
                 <p className="text-muted-foreground">
                   Get help with your account, billing questions, or technical issues.
                 </p>
-                <Button asChild className="w-full">
+                <Button asChild className="w-full btn-primary">
                   <a href="mailto:support@quickclips.pro">
                     support@quickclips.pro
                   </a>
@@ -81,7 +81,7 @@ export default function ContactPage() {
                 <p className="text-muted-foreground">
                   Discuss custom plans, volume discounts, and enterprise features.
                 </p>
-                <Button asChild className="w-full">
+                <Button asChild className="w-full btn-primary">
                   <a href="mailto:sales@quickclips.pro">
                     sales@quickclips.pro
                   </a>
@@ -101,7 +101,7 @@ export default function ContactPage() {
                 <p className="text-muted-foreground">
                   Explore partnership opportunities, integrations, and collaborations.
                 </p>
-                <Button asChild className="w-full">
+                <Button asChild className="w-full btn-primary">
                   <a href="mailto:partners@quickclips.pro">
                     partners@quickclips.pro
                   </a>
@@ -218,7 +218,7 @@ export default function ContactPage() {
                   <p className="text-muted-foreground mb-4">
                     Get instant help with our live chat support available during business hours.
                   </p>
-                  <Button variant="outline" className="w-full">
+                  <Button variant="outline" className="w-full btn-secondary">
                     Start Live Chat
                   </Button>
                 </CardContent>
@@ -233,7 +233,7 @@ export default function ContactPage() {
                   <p className="text-muted-foreground mb-4">
                     Browse our comprehensive knowledge base and tutorials.
                   </p>
-                  <Button asChild variant="outline" className="w-full">
+                  <Button asChild variant="outline" className="w-full btn-secondary">
                     <Link href="/help">
                       Visit Help Center
                     </Link>
@@ -250,7 +250,7 @@ export default function ContactPage() {
                   <p className="text-muted-foreground mb-4">
                     Found an issue? Help us improve Quick Clips by reporting bugs.
                   </p>
-                  <Button asChild variant="outline" className="w-full">
+                  <Button asChild variant="outline" className="w-full btn-secondary">
                     <a href="mailto:bugs@quickclips.pro">
                       Report Bug
                     </a>
@@ -267,7 +267,7 @@ export default function ContactPage() {
                   <p className="text-muted-foreground mb-4">
                     Have an idea for a new feature? We'd love to hear from you!
                   </p>
-                  <Button asChild variant="outline" className="w-full">
+                  <Button asChild variant="outline" className="w-full btn-secondary">
                     <a href="mailto:features@quickclips.pro">
                       Suggest Feature
                     </a>
@@ -313,10 +313,10 @@ export default function ContactPage() {
             Don't have questions? Jump right in and start creating viral clips with Quick Clips today.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button asChild size="lg" className="h-12 px-8 text-base">
+            <Button asChild size="lg" className="h-12 px-8 text-base btn-primary">
               <Link href="/signup">Start Free Trial</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base">
+            <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base btn-secondary">
               <Link href="/#features">Learn More</Link>
             </Button>
           </div>
