@@ -177,6 +177,7 @@ export function DashboardClient({
                 <Button
                   disabled={files.length === 0 || uploading}
                   onClick={handleUpload}
+                  className="btn-primary"
                 >
                   {uploading ? (
                     <>
