@@ -16,6 +16,7 @@ import { signOut } from "next-auth/react";
 import { useEffect } from "react";
 import { toast } from "sonner";
 import QuickClipsLogo from "./logo";
+import { useOptimizedRouter } from "~/lib/navigation";
 
 const NavHeader = ({ credits, email }: { credits: number; email: string }) => {
   return (
