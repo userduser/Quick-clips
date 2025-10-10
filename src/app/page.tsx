@@ -174,12 +174,12 @@ export default function HomePage() {
           <div className="flex items-center gap-3">
             <ScrollReveal direction="right" delay={100}>
               <Button asChild variant="ghost" className="hover:glow-orange transition-all duration-300">
-                <Link href="/login">Sign In</Link>
+                <Link href="/login" prefetch={true}>Sign In</Link>
               </Button>
             </ScrollReveal>
             <ScrollReveal direction="right" delay={200}>
               <Button asChild className="bg-gradient-orange text-black shadow-glow hover:shadow-card transition-all duration-300 gradient-border">
-                <Link href="/signup">Get Started</Link>
+                <Link href="/signup" prefetch={true}>Get Started</Link>
               </Button>
             </ScrollReveal>
           </div>
