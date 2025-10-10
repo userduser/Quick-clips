@@ -44,7 +44,7 @@ const NavHeader = ({ credits, email }: { credits: number; email: string }) => {
               variant="outline"
               size="sm"
               asChild
-              className="h-8 text-xs font-medium"
+              className="h-8 text-xs font-medium btn-secondary"
             >
               <Link href="/dashboard/billing" prefetch={true}>Buy more</Link>
             </Button>
