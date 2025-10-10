@@ -114,7 +114,7 @@ export function DashboardClient({
           </p>
         </div>
         <Link href="/dashboard/billing">
-          <Button>Buy Credits</Button>
+          <Button className="btn-primary">Buy Credits</Button>
         </Link>
       </div>
 
