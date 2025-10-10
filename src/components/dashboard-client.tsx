@@ -199,6 +199,7 @@ export function DashboardClient({
                       size="sm"
                       onClick={handleRefresh}
                       disabled={refreshing}
+                      className="btn-secondary"
                     >
                       {refreshing && (
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
