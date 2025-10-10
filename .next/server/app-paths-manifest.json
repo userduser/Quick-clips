@@ -1,9 +1,3 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/about/page": "app/about/page.js",
-  "/affiliate/page": "app/affiliate/page.js",
-  "/login/page": "app/login/page.js",
-  "/page": "app/page.js",
-  "/privacy/page": "app/privacy/page.js",
-  "/terms/page": "app/terms/page.js"
+  "/page": "app/page.js"
 }

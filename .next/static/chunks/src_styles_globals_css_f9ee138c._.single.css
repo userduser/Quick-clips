@@ -811,10 +811,6 @@
     margin-top: calc(var(--spacing) * 12);
   }
 
-  .mt-\[5px\] {
-    margin-top: 5px;
-  }
-
   .mt-\[8px\] {
     margin-top: 8px;
   }
@@ -877,22 +873,6 @@
 
   .ml-\[-0\.5px\] {
     margin-left: -.5px;
-  }
-
-  .ml-\[-0\.7px\] {
-    margin-left: -.7px;
-  }
-
-  .ml-\[-0px\] {
-    margin-left: 0;
-  }
-
-  .ml-\[-01px\], .ml-\[-1px\] {
-    margin-left: -1px;
-  }
-
-  .ml-\[0\.5px\] {
-    margin-left: .5px;
   }
 
   .ml-auto {
