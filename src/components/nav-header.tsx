@@ -54,7 +54,7 @@ const NavHeader = ({ credits, email }: { credits: number; email: string }) => {
             <DropdownMenuTrigger asChild>
               <Button
                 variant="ghost"
-                className="relative h-8 w-8 rounded-full p-0"
+                className="relative h-8 w-8 rounded-full p-0 btn-ghost"
               >
                 <Avatar>
                   <AvatarFallback>{email.charAt(0)}</AvatarFallback>
