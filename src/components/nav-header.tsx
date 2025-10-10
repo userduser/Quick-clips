@@ -19,6 +19,14 @@ import QuickClipsLogo from "./logo";
 import { useOptimizedRouter } from "~/lib/navigation";
 
 const NavHeader = ({ credits, email }: { credits: number; email: string }) => {
+  const { prefetchRoute } = useOptimizedRouter();
+
+  // Prefetch common routes on component mount
+  useEffect(() => {
+    prefetchRoute("/dashboard/billing");
+    prefetchRoute("/login");
+  }, [prefetchRoute]);
+
   return (
     <header className="bg-background sticky top-0 z-10 flex justify-center border-b">
       <div className="container flex h-16 items-center justify-between px-4 py-2">
@@ -38,7 +46,7 @@ const NavHeader = ({ credits, email }: { credits: number; email: string }) => {
               asChild
               className="h-8 text-xs font-medium"
             >
-              <Link href="/dashboard/billing">Buy more</Link>
+              <Link href="/dashboard/billing" prefetch={true}>Buy more</Link>
             </Button>
           </div>
 
@@ -59,7 +67,7 @@ const NavHeader = ({ credits, email }: { credits: number; email: string }) => {
               </DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem asChild>
-                <Link href="/dashboard/billing">Billing</Link>
+                <Link href="/dashboard/billing" prefetch={true}>Billing</Link>
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem
