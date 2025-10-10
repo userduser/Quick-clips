@@ -5,6 +5,17 @@
 import "./src/env.js";
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+  // Optimize performance
+  experimental: {
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-dropdown-menu'],
+  },
+  // Enable static optimization where possible
+  trailingSlash: false,
+  // Optimize images
+  images: {
+    formats: ['image/webp', 'image/avif'],
+  },
+};
 
 export default config;
