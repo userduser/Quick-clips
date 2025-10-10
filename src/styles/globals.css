@@ -356,13 +356,24 @@
   /* Custom Button Styles */
   .btn-primary {
     @apply bg-gradient-orange text-black shadow-glow hover:shadow-card transition-all duration-300 gradient-border animate-float;
+    /* Remove any size/padding overrides - handled by Button component variants */
   }
   
   .btn-secondary {
     @apply glass-card-hover shadow-card border border-border/50 hover:glow-orange transition-all duration-300;
+    /* Clear background with hover effects */
   }
   
   .btn-ghost {
     @apply hover:glow-orange transition-all duration-300 bg-transparent border-transparent hover:bg-primary/10;
+    /* Fully transparent with subtle hover */
+  }
+
+  /* Override any button that doesn't have our classes */
+  .btn-primary,
+  .btn-secondary, 
+  .btn-ghost {
+    /* Ensure our styles take priority over any inherited Tailwind */
+    position: relative;
   }
 }
