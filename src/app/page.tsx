@@ -456,10 +456,10 @@ export default function HomePage() {
                 Join thousands of content creators who are already using Quick Clips to grow their audience.
               </p>
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <Button asChild size="lg" className="h-12 px-8 text-base bg-gradient-orange text-black shadow-glow hover:shadow-card animate-float gradient-border">
+                <Button asChild size="lg" className="h-12 px-8 text-base btn-primary">
                   <Link href="/signup">Start Your Free Trial</Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base glass-card-hover shadow-card">
+                <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base btn-secondary">
                   <Link href="/login">Sign In to Dashboard</Link>
                 </Button>
               </div>
