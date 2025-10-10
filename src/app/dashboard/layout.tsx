@@ -1,11 +1,18 @@
-"use server";
-
 import { redirect } from "next/navigation";
 import type { ReactNode } from "react";
 import NavHeader from "~/components/nav-header";
 import { Toaster } from "~/components/ui/sonner";
 import { auth } from "~/server/auth";
 import { db } from "~/server/db";
+import { cache } from "react";
+
+// Cache the user data to prevent repeated database queries
+const getCachedUser = cache(async (userId: string) => {
+  return await db.user.findUniqueOrThrow({
+    where: { id: userId },
+    select: { credits: true, email: true },
+  });
+});
 
 export default async function DashboardLayout({
   children,
@@ -18,10 +25,7 @@ export default async function DashboardLayout({
     redirect("/login");
   }
 
-  const user = await db.user.findUniqueOrThrow({
-    where: { id: session.user.id },
-    select: { credits: true, email: true },
-  });
+  const user = await getCachedUser(session.user.id);
 
   return (
     <div className="flex min-h-screen flex-col">
