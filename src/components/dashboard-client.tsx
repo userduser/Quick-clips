@@ -149,7 +149,7 @@ export function DashboardClient({
                         or click to browse (MP4 up to 500MB)
                       </p>
                       <Button
-                        className="cursor-pointer"
+                        className="cursor-pointer btn-secondary"
                         variant="default"
                         size="sm"
                         disabled={uploading}
