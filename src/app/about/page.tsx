@@ -25,10 +25,10 @@ export default function AboutPage() {
             </Link>
           </nav>
           <div className="flex items-center gap-3">
-            <Button asChild variant="ghost">
+            <Button asChild variant="ghost" className="btn-ghost">
               <Link href="/login">Sign In</Link>
             </Button>
-            <Button asChild>
+            <Button asChild className="btn-primary">
               <Link href="/signup">Get Started</Link>
             </Button>
           </div>
@@ -207,10 +207,10 @@ export default function AboutPage() {
             Join thousands of creators who are already scaling their reach with Quick Clips.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button asChild size="lg" className="h-12 px-8 text-base">
+            <Button asChild size="lg" className="h-12 px-8 text-base btn-primary">
               <Link href="/signup">Start Your Free Trial</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base">
+            <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base btn-secondary">
               <Link href="/contact">Contact Us</Link>
             </Button>
           </div>
@@ -249,7 +249,7 @@ export default function AboutPage() {
             </div>
             
             <div>
-              <h3 className="font-semibold mb-4">Legal</h3>
+              <h3 className="font-semibsemibold mb-4">Legal</h3>
               <ul className="space-y-2 text-sm">
                 <li><Link href="/privacy" className="text-muted-foreground hover:text-foreground">Privacy Policy</Link></li>
                 <li><Link href="/terms" className="text-muted-foreground hover:text-foreground">Terms of Service</Link></li>

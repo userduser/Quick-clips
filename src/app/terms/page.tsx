@@ -10,10 +10,10 @@ export default function TermsPage() {
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <QuickClipsLogo />
           <div className="flex items-center gap-3">
-            <Button asChild variant="ghost">
+            <Button asChild variant="ghost" className="btn-ghost">
               <Link href="/login">Sign In</Link>
             </Button>
-            <Button asChild>
+            <Button asChild className="btn-primary">
               <Link href="/signup">Get Started</Link>
             </Button>
           </div>
