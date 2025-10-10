@@ -352,4 +352,17 @@
   .animate-pulse {
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
+
+  /* Custom Button Styles */
+  .btn-primary {
+    @apply bg-gradient-orange text-black shadow-glow hover:shadow-card transition-all duration-300 gradient-border animate-float;
+  }
+  
+  .btn-secondary {
+    @apply glass-card-hover shadow-card border border-border/50 hover:glow-orange transition-all duration-300;
+  }
+  
+  .btn-ghost {
+    @apply hover:glow-orange transition-all duration-300 bg-transparent border-transparent hover:bg-primary/10;
+  }
 }
