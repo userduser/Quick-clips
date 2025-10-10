@@ -60,7 +60,7 @@ function ClipCard({ clip }: { clip: Clip }) {
         )}
       </div>
       <div className="flex flex-col gap-2">
-        <Button onClick={handleDownload} variant="outline" size="sm">
+        <Button onClick={handleDownload} variant="outline" size="sm" className="btn-secondary">
           <Download className="mr-1.5 h-4 w-4" />
           Download
         </Button>
