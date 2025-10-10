@@ -223,7 +223,7 @@ export default function HomePage() {
             <ScrollReveal direction="up" delay={600}>
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Button asChild size="lg" className="h-12 px-8 text-base bg-gradient-orange text-black shadow-glow hover:shadow-card transition-all duration-300 animate-float gradient-border">
-                  <Link href="/signup">Start Creating Clips</Link>
+                  <Link href="/signup" prefetch={true}>Start Creating Clips</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base glass-card-hover shadow-card">
                   <Link href="#features">See How It Works</Link>
