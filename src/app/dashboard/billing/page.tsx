@@ -113,7 +113,7 @@ export default function BillingPage() {
     <div className="mx-auto flex flex-col space-y-8 px-4 py-12">
       <div className="relative flex items-center justify-center gap-4">
         <Button
-          className="absolute top-0 left-0"
+          className="absolute top-0 left-0 btn-ghost"
           variant="outline"
           size="icon"
           asChild
