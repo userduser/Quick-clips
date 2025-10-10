@@ -412,10 +412,10 @@ export default function HomePage() {
                   <CardFooter>
                     <Button 
                       asChild 
-                      className={`w-full transition-all duration-300 ${
+                      className={`w-full ${
                         plan.isPopular 
-                          ? "bg-gradient-orange text-black shadow-glow hover:shadow-card gradient-border" 
-                          : "glass-card-hover shadow-card"
+                          ? "btn-primary" 
+                          : "btn-secondary"
                       }`}
                       variant={plan.isPopular ? "default" : "outline"}
                     >
