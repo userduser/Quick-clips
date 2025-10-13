@@ -8,7 +8,7 @@ import { Button } from "~/components/ui/button";
 import { useAuthModal } from "~/hooks/use-auth-modal";
 
 export function LogoutModal() {
-  const { closeModal } = useAuthModal();
+  const { closeModal, isClosing } = useAuthModal();
   const [isLoggingOut, setIsLoggingOut] = useState(false);
 
   const handleLogout = async () => {
