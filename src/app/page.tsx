@@ -147,7 +147,11 @@ const features = [
   }
 ];
 
+"use client";
+
 export default function HomePage() {
+  const { isAnnual, isAnimating, togglePricing, formatPrice, getBillingInfo } = usePricingToggle();
+  
   return (
     <main className="flex min-h-screen flex-col bg-background">
       {/* Navigation */}
