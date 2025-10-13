@@ -67,9 +67,11 @@ export function LoginForm({
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card className="border-0 bg-transparent shadow-none">
-        <CardHeader className="text-center">
-          <CardTitle className="text-2xl">Welcome back</CardTitle>
-          <CardDescription>
+        <CardHeader className="text-center pb-4">
+          <CardTitle className="text-2xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
+            Welcome back
+          </CardTitle>
+          <CardDescription className="text-muted-foreground/80 mt-2">
             Sign in to your Quick Clips account
           </CardDescription>
         </CardHeader>
