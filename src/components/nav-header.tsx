@@ -40,22 +40,14 @@ const NavHeader = ({ credits, email }: { credits: number; email: string }) => {
             >
               {credits} credits
             </Badge>
-            <Button
-              variant="outline"
-              size="sm"
-              asChild
-              className="h-8 text-xs font-medium btn-secondary"
-            >
+            <Button asChild className="btn-secondary btn-sm">
               <Link href="/dashboard/billing" prefetch={true}>Buy more</Link>
             </Button>
           </div>
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button
-                variant="ghost"
-                className="relative h-8 w-8 rounded-full p-0 btn-ghost"
-              >
+              <Button className="btn-ghost btn-icon">
                 <Avatar>
                   <AvatarFallback>{email.charAt(0)}</AvatarFallback>
                 </Avatar>

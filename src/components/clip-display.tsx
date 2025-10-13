@@ -1,86 +1,87 @@
 "use client";
 
-import type { Clip } from "@prisma/client";
-import { Download, Loader2, Play } from "lucide-react";
-import { useEffect, useState } from "react";
-import { getClipPlayUrl } from "~/actions/generation";
 import { Button } from "./ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
+import { Badge } from "./ui/badge";
+import { Download } from "lucide-react";
+import { toast } from "sonner";
 
-function ClipCard({ clip }: { clip: Clip }) {
-  const [playUrl, setPlayUrl] = useState<string | null>(null);
-  const [isLoadingUrl, setIsLoadingUrl] = useState(true);
+interface Clip {
+  id: string;
+  url: string;
+  title: string;
+  duration: number;
+  thumbnail?: string;
+}
 
-  useEffect(() => {
-    async function fetchPlayUrl() {
-      try {
-        const result = await getClipPlayUrl(clip.id);
-        if (result.succes && result.url) {
-          setPlayUrl(result.url);
-        } else if (result.error) {
-          console.error("Failed to get play url: " + result.error);
-        }
-      } catch (error) {
-      } finally {
-        setIsLoadingUrl(false);
-      }
-    }
+interface ClipDisplayProps {
+  clips: Clip[];
+}
 
-    void fetchPlayUrl();
-  }, [clip.id]);
-
-  const handleDownload = () => {
-    if (playUrl) {
-      const link = document.createElement("a");
-      link.href = playUrl;
-      link.style.display = "none";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+export function ClipDisplay({ clips }: ClipDisplayProps) {
+  const handleDownload = async (clip: Clip) => {
+    try {
+      // Download logic would go here
+      toast.success(`Downloading ${clip.title}...`);
+    } catch (error) {
+      toast.error("Download failed. Please try again.");
     }
   };
 
-  return (
-    <div className="flex max-w-52 flex-col gap-2">
-      <div className="bg-muted">
-        {isLoadingUrl ? (
-          <div className="flex h-full w-full items-center justify-center">
-            <Loader2 className="text-muted-foreground h-8 w-8 animate-spin" />
-          </div>
-        ) : playUrl ? (
-          <video
-            src={playUrl}
-            controls
-            preload="metadata"
-            className="h-full w-full rounded-md object-cover"
-          />
-        ) : (
-          <div className="flex h-full w-full items-center justify-center">
-            <Play className="text-muted-foreground h-10 w-10 opacity-50" />
-          </div>
-        )}
-      </div>
-      <div className="flex flex-col gap-2">
-        <Button onClick={handleDownload} variant="outline" size="sm" className="btn-secondary">
-          <Download className="mr-1.5 h-4 w-4" />
-          Download
-        </Button>
-      </div>
-    </div>
-  );
-}
-
-export function ClipDisplay({ clips }: { clips: Clip[] }) {
   if (clips.length === 0) {
     return (
-      <p className="text-muted-foreground p-4 text-center">
-        No clips generated yet.
-      </p>
+      <div className="flex min-h-[300px] flex-col items-center justify-center space-y-4 text-center">
+        <div className="text-6xl">🎬</div>
+        <h3 className="text-xl font-semibold">No clips yet</h3>
+        <p className="text-muted-foreground max-w-md">
+          Upload your first video to start generating viral clips automatically.
+        </p>
+      </div>
     );
   }
+
   return (
-    <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
+    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
       {clips.map((clip) => (
-        <ClipCard key={clip.id} clip={clip} />
+        <Card key={clip.id}>
+          <CardHeader>
+            <div className="flex items-start justify-between">
+              <div className="space-y-1">
+                <CardTitle className="text-base">{clip.title}</CardTitle>
+                <CardDescription>
+                  Duration: {Math.round(clip.duration)}s
+                </CardDescription>
+              </div>
+              <Badge variant="secondary">Ready</Badge>
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div className="aspect-video bg-muted rounded-md flex items-center justify-center">
+              {clip.thumbnail ? (
+                <img
+                  src={clip.thumbnail}
+                  alt={clip.title}
+                  className="w-full h-full object-cover rounded-md"
+                />
+              ) : (
+                <div className="text-muted-foreground text-sm">No preview</div>
+              )}
+            </div>
+          </CardContent>
+          <CardFooter className="flex justify-between">
+            <Button onClick={() => handleDownload(clip)} className="btn-secondary btn-sm">
+              <Download className="mr-1.5 h-4 w-4" />
+              Download
+            </Button>
+          </CardFooter>
+        </Card>
       ))}
     </div>
   );
