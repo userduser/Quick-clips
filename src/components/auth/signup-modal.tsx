@@ -58,7 +58,7 @@ export function SignupModal() {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 modal-overlay">
+    <div className={`fixed inset-0 z-50 flex items-center justify-center p-4 modal-overlay ${isClosing ? 'closing' : ''}`}>
       {/* Backdrop */}
       <div 
         className="absolute inset-0 bg-black/50 backdrop-blur-md"
@@ -66,7 +66,7 @@ export function SignupModal() {
       />
       
       {/* Modal */}
-      <div className="relative w-full max-w-md modal-content">
+      <div className={`relative w-full max-w-md modal-content ${isClosing ? 'closing' : ''}`}>
         {/* Glow effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary/35 via-primary/25 to-primary/35 rounded-2xl blur-xl" />
         
