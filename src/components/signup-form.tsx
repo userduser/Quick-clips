@@ -118,7 +118,7 @@ export function SignupForm({
                 </p>
               )}
 
-              <Button type="submit" className="w-full btn-primary" disabled={isSubmitting}>
+              <Button type="submit" className="btn-primary btn-full" disabled={isSubmitting}>
                 {isSubmitting ? "Signing up..." : "Sign up"}
               </Button>
             </div>
