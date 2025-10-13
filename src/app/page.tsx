@@ -483,7 +483,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <Footer />
+      <SessionAwareFooter />
     </main>
   );
 }
