@@ -75,34 +75,40 @@ export function LoginForm({
             Sign in to your Quick Clips account
           </CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className="pt-2">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-col gap-6">
-              <div className="grid gap-2">
-                <Label htmlFor="email">Email</Label>
+              <div className="grid gap-3">
+                <Label htmlFor="email" className="text-sm font-medium text-foreground/90">Email</Label>
                 <Input
                   id="email"
                   type="email"
                   placeholder="m@example.com"
                   required
                   {...register("email")}
+                  className="bg-background/50 border-border/50 focus:border-primary/50 focus:ring-primary/20 transition-colors"
                 />
                 {errors.email && (
-                  <p className="text-sm text-red-500">{errors.email.message}</p>
+                  <p className="text-sm text-red-500 flex items-center gap-2">
+                    <span className="w-1 h-1 bg-red-500 rounded-full"></span>
+                    {errors.email.message}
+                  </p>
                 )}
               </div>
-              <div className="grid gap-2">
+              <div className="grid gap-3">
                 <div className="flex items-center">
-                  <Label htmlFor="password">Password</Label>
+                  <Label htmlFor="password" className="text-sm font-medium text-foreground/90">Password</Label>
                 </div>
                 <Input
                   id="password"
                   type="password"
                   required
                   {...register("password")}
+                  className="bg-background/50 border-border/50 focus:border-primary/50 focus:ring-primary/20 transition-colors"
                 />
                 {errors.password && (
-                  <p className="text-sm text-red-500">
+                  <p className="text-sm text-red-500 flex items-center gap-2">
+                    <span className="w-1 h-1 bg-red-500 rounded-full"></span>
                     {errors.password.message}
                   </p>
                 )}
