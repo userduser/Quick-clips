@@ -16,7 +16,7 @@ import { useAuthModal } from "~/hooks/use-auth-modal";
 import QuickClipsLogo from "~/components/logo";
 
 export function SignupModal() {
-  const { closeModal, switchToLogin } = useAuthModal();
+  const { closeModal, switchToLogin, isClosing } = useAuthModal();
   const [error, setError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const router = useRouter();
