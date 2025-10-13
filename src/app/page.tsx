@@ -13,6 +13,7 @@ import { Badge } from "~/components/ui/badge";
 import { ScrollReveal } from "~/components/scroll-reveal";
 import { AuthButtons } from "~/components/auth-buttons";
 import { HeroAuthButton } from "~/components/hero-auth-button";
+import { PricingButton } from "~/components/pricing-button";
 
 const subscriptionPlans = [
   {
