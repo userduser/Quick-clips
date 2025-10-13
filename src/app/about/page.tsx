@@ -3,6 +3,7 @@ import { Button } from "~/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 import QuickClipsLogo from "~/components/logo";
 import { PageAuthButtons } from "~/components/page-auth-buttons";
+import { CTAAuthButtons } from "~/components/cta-auth-buttons";
 
 export default function AboutPage() {
   return (
