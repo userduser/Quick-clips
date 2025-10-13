@@ -399,10 +399,12 @@ export default function HomePage() {
                         <span className="text-4xl font-bold">Custom</span>
                       ) : (
                         <>
-                          <AnimatedPrice 
-                            price={formatPrice(plan.price, plan.yearlyPrice)}
+                          <EnhancedPriceDisplay 
+                            monthlyPrice={plan.price}
+                            yearlyPrice={plan.yearlyPrice}
+                            isAnnual={isAnnual}
                             isAnimating={isAnimating}
-                            className="text-4xl font-bold"
+                            className=""
                           />
                           <span className="text-muted-foreground">/month</span>
                         </>
