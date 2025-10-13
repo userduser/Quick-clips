@@ -15,6 +15,7 @@ export default async function DashboardPage() {
   const userData = await db.user.findUniqueOrThrow({
     where: { id: session.user.id },
     select: {
+      credits: true,
       uploadedFiles: {
         where: {
           uploaded: true,
