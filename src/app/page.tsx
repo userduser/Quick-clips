@@ -394,12 +394,29 @@ export default function HomePage() {
                   <CardHeader className="text-center">
                     <CardTitle className="text-2xl">{plan.title}</CardTitle>
                     <div className="mt-4">
-                      <span className="text-4xl font-bold">{plan.price}</span>
-                      {plan.price !== "Custom" && <span className="text-muted-foreground">/month</span>}
+                      {plan.price === "Custom" ? (
+                        <span className="text-4xl font-bold">Custom</span>
+                      ) : (
+                        <>
+                          <AnimatedPrice 
+                            price={formatPrice(plan.price, plan.yearlyPrice)}
+                            isAnimating={isAnimating}
+                            className="text-4xl font-bold"
+                          />
+                          <span className="text-muted-foreground">/month</span>
+                        </>
+                      )}
                     </div>
-                    {plan.yearlyPrice !== "Contact us" && (
-                      <div className="text-sm text-muted-foreground">
-                        or {plan.yearlyPrice}/year <span className="text-primary font-medium">(Save 25%)</span>
+                    {plan.price !== "Custom" && (
+                      <div className={`text-sm transition-all duration-300 ${
+                        isAnnual ? 'text-primary' : 'text-muted-foreground'
+                      }`}>
+                        {getBillingInfo()}
+                        {isAnnual && (
+                          <span className="ml-2 inline-flex items-center px-2 py-1 rounded-full text-xs bg-primary/10 text-primary animate-pulse">
+                            Save 25%
+                          </span>
+                        )}
                       </div>
                     )}
                     <CardDescription className="mt-2">{plan.description}</CardDescription>
