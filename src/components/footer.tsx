@@ -3,11 +3,12 @@
 import Link from "next/link";
 import QuickClipsLogo from "~/components/logo";
 import { ScrollReveal } from "~/components/scroll-reveal";
-import { useSession } from "next-auth/react";
 
-export function Footer() {
-  const { data: session } = useSession();
+interface FooterProps {
+  showDashboard?: boolean;
+}
 
+export function Footer({ showDashboard = false }: FooterProps) {
   return (
     <footer className="border-t border-border/40 glass-card shadow-card">
       <div className="container mx-auto px-4 py-16">
@@ -27,7 +28,7 @@ export function Footer() {
               <ul className="space-y-2 text-sm">
                 <li><Link href="/#features" className="text-muted-foreground hover:text-primary transition-colors">Features</Link></li>
                 <li><Link href="/#pricing" className="text-muted-foreground hover:text-primary transition-colors">Pricing</Link></li>
-                {session && (
+                {showDashboard && (
                   <li><Link href="/dashboard" className="text-muted-foreground hover:text-primary transition-colors">Dashboard</Link></li>
                 )}
               </ul>
