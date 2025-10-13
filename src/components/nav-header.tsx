@@ -63,7 +63,7 @@ const NavHeader = ({ credits, email }: { credits: number; email: string }) => {
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem
-                onClick={() => signOut({ redirectTo: "/login" })}
+                onClick={openLogout}
                 className="text-destructive cursor-pointer"
               >
                 Sign out
