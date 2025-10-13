@@ -11,6 +11,7 @@ import {
 import QuickClipsLogo from "~/components/logo";
 import { Badge } from "~/components/ui/badge";
 import { ScrollReveal } from "~/components/scroll-reveal";
+import { AuthButtons } from "~/components/auth-buttons";
 
 const subscriptionPlans = [
   {
