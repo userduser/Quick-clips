@@ -29,6 +29,17 @@ export function EnhancedPriceDisplay({
   const currentPrice = isAnnual ? yearlyNum : monthlyNum;
   const previousPrice = isAnnual ? monthlyNum : yearlyNum;
 
+  console.log('EnhancedPriceDisplay render:', { 
+    monthlyPrice, 
+    yearlyPrice, 
+    isAnnual, 
+    isAnimating,
+    monthlyNum,
+    yearlyNum,
+    currentPrice,
+    previousPrice
+  });
+
   return (
     <div className={`inline-block ${className}`}>
       <NumberCounter
