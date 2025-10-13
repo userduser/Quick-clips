@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "~/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 import QuickClipsLogo from "~/components/logo";
+import { PageAuthButtons } from "~/components/page-auth-buttons";
 
 export default function AboutPage() {
   return (
@@ -24,14 +25,7 @@ export default function AboutPage() {
               Affiliate
             </Link>
           </nav>
-          <div className="flex items-center gap-3">
-            <Button asChild variant="ghost" className="btn-ghost">
-              <Link href="/login">Sign In</Link>
-            </Button>
-            <Button asChild className="btn-primary">
-              <Link href="/signup">Get Started</Link>
-            </Button>
-          </div>
+          <PageAuthButtons />
         </div>
       </header>
 
@@ -207,10 +201,10 @@ export default function AboutPage() {
             Join thousands of creators who are already scaling their reach with Quick Clips.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button asChild size="lg" className="h-12 px-8 text-base btn-primary">
-              <Link href="/signup">Start Your Free Trial</Link>
+            <Button onClick={() => window.dispatchEvent(new CustomEvent('openSignup'))} className="btn-primary btn-lg">
+              Start Your Free Trial
             </Button>
-            <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base btn-secondary">
+            <Button asChild className="btn-secondary btn-lg">
               <Link href="/contact">Contact Us</Link>
             </Button>
           </div>
@@ -249,7 +243,7 @@ export default function AboutPage() {
             </div>
             
             <div>
-              <h3 className="font-semibsemibold mb-4">Legal</h3>
+              <h3 className="font-semibold mb-4">Legal</h3>
               <ul className="space-y-2 text-sm">
                 <li><Link href="/privacy" className="text-muted-foreground hover:text-foreground">Privacy Policy</Link></li>
                 <li><Link href="/terms" className="text-muted-foreground hover:text-foreground">Terms of Service</Link></li>
