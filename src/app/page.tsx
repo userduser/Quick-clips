@@ -18,7 +18,6 @@ import { HeroAuthButton } from "~/components/hero-auth-button";
 import { PricingButton } from "~/components/pricing-button";
 import { CTAAuthButtons } from "~/components/cta-auth-buttons";
 import { PricingToggle } from "~/components/pricing-toggle";
-import { AnimatedPrice } from "~/components/animated-price";
 import { EnhancedPriceDisplay } from "~/components/enhanced-price-display";
 import { usePricingToggle } from "~/hooks/use-pricing-toggle";
 
