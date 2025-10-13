@@ -14,7 +14,7 @@ const QuickClipsLogo = ({ variant = "full", className = "", href = "/" }: LogoPr
       {/* Q Logo SVG with orange color */}
       <svg 
         width="23" 
-        height="auto" 
+        height="32" 
         viewBox="0 0 149 208" 
         className="flex-shrink-0"
         style={{ overflow: 'visible' }}
