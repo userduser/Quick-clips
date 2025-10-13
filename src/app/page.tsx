@@ -19,6 +19,7 @@ import { PricingButton } from "~/components/pricing-button";
 import { CTAAuthButtons } from "~/components/cta-auth-buttons";
 import { PricingToggle } from "~/components/pricing-toggle";
 import { EnhancedPriceDisplay } from "~/components/enhanced-price-display";
+import { usePricingToggle } from "~/hooks/use-pricing-toggle";
 import { Footer } from "~/components/footer";
 
 const subscriptionPlans = [
