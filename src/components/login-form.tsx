@@ -115,18 +115,26 @@ export function LoginForm({
               </div>
 
               {error && (
-                <p className="rounded-md bg-red-50 p-3 text-sm text-red-500">
-                  {error}
-                </p>
+                <div className="rounded-lg bg-red-500/10 border border-red-500/20 p-4 text-sm text-red-400 flex items-center gap-3">
+                  <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                  <span>{error}</span>
+                </div>
               )}
 
               <Button type="submit" className="btn-primary btn-full" disabled={isSubmitting}>
-                {isSubmitting ? "Logging in..." : "Log in"}
+                {isSubmitting ? (
+                  <>
+                    <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin mr-2"></div>
+                    Logging in...
+                  </>
+                ) : (
+                  "Log in"
+                )}
               </Button>
             </div>
-            <div className="mt-4 text-center text-sm">
-              Don&apos;t have an account?{" "}
-              <Link href="/signup" className="underline underline-offset-4">
+            <div className="mt-6 text-center text-sm border-t border-border/30 pt-6">
+              <span className="text-muted-foreground">Don&apos;t have an account? </span>
+              <Link href="/signup" className="text-primary hover:text-primary/80 font-medium transition-colors">
                 Sign up
               </Link>
             </div>
