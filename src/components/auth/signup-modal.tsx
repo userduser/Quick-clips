@@ -27,6 +27,18 @@ export function SignupModal() {
     formState: { errors },
   } = useForm<SignupFormValues>({ resolver: zodResolver(signupSchema) });
 
+  // Handle Escape key
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [closeModal]);
+
   const onSubmit = async (data: SignupFormValues) => {
     try {
       setIsSubmitting(true);
