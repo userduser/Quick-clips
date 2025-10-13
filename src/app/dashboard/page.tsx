@@ -59,6 +59,6 @@ export default async function DashboardPage() {
   }));
 
   return (
-    <DashboardClient uploadedFiles={formattedFiles} clips={formattedClips} />
+    <DashboardClient clips={formattedClips} credits={userData.credits} />
   );
 }
