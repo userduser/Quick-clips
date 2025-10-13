@@ -514,9 +514,14 @@
   }
 
   /* Ensure backdrop blur is maintained during animation */
-  .modal-overlay > div {
+  .modal-overlay {
+    backdrop-filter: none; /* Let child handle the blur */
+  }
+  
+  .modal-overlay > div[class*="backdrop-blur"] {
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
+    will-change: backdrop-filter;
   }
 
   .modal-content {
