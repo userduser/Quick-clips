@@ -12,7 +12,8 @@ export function PricingToggle({ isAnnual, onToggle }: PricingToggleProps) {
     <div className="flex items-center justify-center gap-4 mb-8">
       {/* Monthly Label */}
       <span 
-        className={`text-sm font-medium transition-colors duration-300 ${
+        onClick={() => onToggle(false)}
+        className={`text-sm font-medium transition-colors duration-300 cursor-pointer ${
           !isAnnual ? 'text-foreground' : 'text-muted-foreground'
         }`}
       >
@@ -52,7 +53,8 @@ export function PricingToggle({ isAnnual, onToggle }: PricingToggleProps) {
       {/* Annual Label with Badge */}
       <div className="flex items-center gap-2">
         <span 
-          className={`text-sm font-medium transition-colors duration-300 ${
+          onClick={() => onToggle(true)}
+          className={`text-sm font-medium transition-colors duration-300 cursor-pointer ${
             isAnnual ? 'text-foreground' : 'text-muted-foreground'
           }`}
         >
