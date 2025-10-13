@@ -149,8 +149,6 @@ const features = [
   }
 ];
 
-"use client";
-
 export default function HomePage() {
   const { isAnnual, isAnimating, togglePricing, formatPrice, getBillingInfo } = usePricingToggle();
   
