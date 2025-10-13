@@ -99,7 +99,7 @@ function PricingCard({ plan }: { plan: PricingPlan }) {
           action={() => createCheckoutSession(plan.priceId)}
           className="w-full"
         >
-          <Button variant={plan.buttonVariant} className={`w-full ${plan.buttonVariant === "default" ? "btn-primary" : "btn-secondary"}`} type="submit">
+          <Button className={`${plan.buttonVariant === "default" ? "btn-primary" : "btn-secondary"} btn-full`} type="submit">
             {plan.buttonText}
           </Button>
         </form>
