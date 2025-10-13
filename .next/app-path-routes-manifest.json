@@ -1,0 +1,14 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/api/webhooks/stripe/route": "/api/webhooks/stripe",
+  "/api/inngest/route": "/api/inngest",
+  "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
+  "/about/page": "/about",
+  "/affiliate/page": "/affiliate",
+  "/contact/page": "/contact",
+  "/page": "/",
+  "/privacy/page": "/privacy",
+  "/terms/page": "/terms",
+  "/dashboard/billing/page": "/dashboard/billing",
+  "/dashboard/page": "/dashboard"
+}
