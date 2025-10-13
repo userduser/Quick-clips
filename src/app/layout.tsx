@@ -2,6 +2,7 @@ import "~/styles/globals.css";
 
 import { type Metadata } from "next";
 import { Geist } from "next/font/google";
+import { AuthModalProvider } from "~/components/auth/auth-modal-provider";
 
 export const metadata: Metadata = {
   title: "Quick Clips - AI Video Clipper",
