@@ -513,6 +513,12 @@
     animation: fadeIn 0.3s ease-out forwards;
   }
 
+  /* Ensure backdrop blur is maintained during animation */
+  .modal-overlay > div {
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+  }
+
   .modal-content {
     opacity: 0;
     transform: scale(0.95) translateY(-10px);
