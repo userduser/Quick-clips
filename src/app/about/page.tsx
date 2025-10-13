@@ -201,9 +201,7 @@ export default function AboutPage() {
             Join thousands of creators who are already scaling their reach with Quick Clips.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button onClick={() => window.dispatchEvent(new CustomEvent('openSignup'))} className="btn-primary btn-lg">
-              Start Your Free Trial
-            </Button>
+            <CTAAuthButtons />
             <Button asChild className="btn-secondary btn-lg">
               <Link href="/contact">Contact Us</Link>
             </Button>
