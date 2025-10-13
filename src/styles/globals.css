@@ -484,26 +484,26 @@
     pointer-events: none !important;
   }
 
-  /* Size variants - add classes as needed */
+  /* Size variants - force override */
   .btn-sm {
-    padding: 0.375rem 0.75rem;
-    min-height: 2rem;
-    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem !important;
+    min-height: 2rem !important;
+    font-size: 0.75rem !important;
   }
   
   .btn-lg {
-    padding: 0.75rem 2rem;
-    min-height: 3rem;
-    font-size: 1rem;
+    padding: 0.75rem 2rem !important;
+    min-height: 3rem !important;
+    font-size: 1rem !important;
   }
   
   .btn-icon {
-    padding: 0.5rem;
-    min-height: 2rem;
-    width: 2rem;
+    padding: 0.5rem !important;
+    min-height: 2rem !important;
+    width: 2rem !important;
   }
   
   .btn-full {
-    width: 100%;
+    width: 100% !important;
   }
 }
