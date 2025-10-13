@@ -506,4 +506,65 @@
   .btn-full {
     width: 100% !important;
   }
+
+  /* Modal Animations */
+  .modal-overlay {
+    opacity: 0;
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+
+  .modal-content {
+    opacity: 0;
+    transform: scale(0.95) translateY(-10px);
+    animation: slideIn 0.3s ease-out 0.1s forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95) translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  /* Modal exit animations */
+  .modal-overlay.closing {
+    animation: fadeOut 0.2s ease-in forwards;
+  }
+
+  .modal-content.closing {
+    animation: slideOut 0.2s ease-in forwards;
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slideOut {
+    from {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.95) translateY(-10px);
+    }
+  }
 }
