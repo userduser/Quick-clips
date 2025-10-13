@@ -49,7 +49,16 @@ export default async function DashboardPage() {
     createdAt: file.createdAt,
   }));
 
+  // Format clips to match expected interface
+  const formattedClips = userData.clips.map((clip) => ({
+    id: clip.id,
+    url: clip.s3Key, // Using s3Key as URL for now
+    title: `Clip ${clip.id.slice(-6)}`, // Generate a title from ID
+    duration: 30, // Default duration - would come from video metadata
+    thumbnail: undefined, // No thumbnail for now
+  }));
+
   return (
-    <DashboardClient uploadedFiles={formattedFiles} clips={userData.clips} />
+    <DashboardClient uploadedFiles={formattedFiles} clips={formattedClips} />
   );
 }
