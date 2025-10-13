@@ -20,7 +20,7 @@ interface PricingPlan {
   description: string;
   features: string[];
   buttonText: string;
-  buttonVariant: VariantProps<typeof buttonVariants>["variant"];
+  buttonVariant: "default" | "outline";
   isPopular?: boolean;
   savePercentage?: string;
   priceId: PriceId;
