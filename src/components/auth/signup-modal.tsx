@@ -58,7 +58,7 @@ export function SignupModal() {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 modal-overlay">
       {/* Backdrop */}
       <div 
         className="absolute inset-0 bg-black/50 backdrop-blur-md"
@@ -66,12 +66,12 @@ export function SignupModal() {
       />
       
       {/* Modal */}
-      <div className="relative w-full max-w-md">
+      <div className="relative w-full max-w-md modal-content">
         {/* Glow effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary/35 via-primary/25 to-primary/35 rounded-2xl blur-xl" />
         
         {/* Main modal content */}
-        <div className="relative glass-card shadow-glow border border-primary/35 rounded-2xl overflow-hidden animate-float" style={{animationDelay: '1s'}}>
+        <div className="relative glass-card shadow-glow border border-primary/35 rounded-2xl overflow-hidden animate-float" style={{animationDelay: '0.3s'}}>
           {/* Close button */}
           <button
             onClick={closeModal}
