@@ -353,14 +353,30 @@
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
-  /* Custom Button Styles */
+  /* Complete Button Styles - No Tailwind Needed */
   .btn-primary {
+    /* Base button properties */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.625rem 1rem;
+    min-height: 2.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    
+    /* Primary styling */
     background: linear-gradient(135deg, #f56800 0%, #cc5500 100%);
     color: #000000;
+    border: 1px solid transparent;
     box-shadow: 0 0 30px rgba(245, 104, 0, 0.2), 0 0 60px rgba(245, 104, 0, 0.1);
     transition: all 0.3s ease;
     position: relative;
-    border: 1px solid transparent;
     animation: float 6s ease-in-out infinite;
   }
   
@@ -380,12 +396,35 @@
       0 20px 25px -5px rgba(0, 0, 0, 0.4),
       0 10px 10px -5px rgba(0, 0, 0, 0.2),
       0 0 0 1px rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
+  }
+  
+  .btn-primary:disabled {
+    opacity: 0.5;
+    pointer-events: none;
   }
   
   .btn-secondary {
+    /* Base button properties */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.625rem 1rem;
+    min-height: 2.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    
+    /* Secondary styling */
     background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(38, 38, 38, 0.6) 100%);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(245, 104, 0, 0.1);
+    color: #f5f5f5;
     box-shadow: 
       0 20px 25px -5px rgba(0, 0, 0, 0.5),
       0 10px 10px -5px rgba(0, 0, 0, 0.3),
@@ -405,9 +444,31 @@
     border-color: rgba(245, 104, 0, 0.3);
   }
   
+  .btn-secondary:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  
   .btn-ghost {
+    /* Base button properties */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.625rem 1rem;
+    min-height: 2.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    
+    /* Ghost styling */
     background: transparent;
     border: 1px solid transparent;
+    color: #a3a3a3;
     transition: all 0.3s ease;
     position: relative;
   }
@@ -415,5 +476,34 @@
   .btn-ghost:hover {
     box-shadow: 0 0 20px rgba(245, 104, 0, 0.3);
     background: rgba(245, 104, 0, 0.1);
+    color: #f5f5f5;
+  }
+  
+  .btn-ghost:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  /* Size variants - add classes as needed */
+  .btn-sm {
+    padding: 0.375rem 0.75rem;
+    min-height: 2rem;
+    font-size: 0.75rem;
+  }
+  
+  .btn-lg {
+    padding: 0.75rem 2rem;
+    min-height: 3rem;
+    font-size: 1rem;
+  }
+  
+  .btn-icon {
+    padding: 0.5rem;
+    min-height: 2rem;
+    width: 2rem;
+  }
+  
+  .btn-full {
+    width: 100%;
   }
 }
