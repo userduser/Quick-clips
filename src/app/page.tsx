@@ -15,7 +15,6 @@ import { AuthButtons } from "~/components/auth-buttons";
 import { HeroAuthButton } from "~/components/hero-auth-button";
 import { PricingButton } from "~/components/pricing-button";
 import { CTAAuthButtons } from "~/components/cta-auth-buttons";
-import { PricingButton } from "~/components/pricing-button";
 
 const subscriptionPlans = [
   {
