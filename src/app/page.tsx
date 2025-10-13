@@ -173,7 +173,7 @@ export default function HomePage() {
           </nav>
           <div className="flex items-center gap-3">
             <ScrollReveal direction="right" delay={100}>
-              <Button asChild variant="ghost" className="btn-ghost">
+              <Button asChild className="btn-ghost">
                 <Link href="/login" prefetch={true}>Sign In</Link>
               </Button>
             </ScrollReveal>
@@ -222,10 +222,10 @@ export default function HomePage() {
             
             <ScrollReveal direction="up" delay={600}>
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <Button asChild size="lg" className="h-12 px-8 text-base btn-primary">
+                <Button asChild className="btn-primary btn-lg">
                   <Link href="/signup" prefetch={true}>Start Creating Clips</Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base btn-secondary">
+                <Button asChild className="btn-secondary btn-lg">
                   <Link href="#features">See How It Works</Link>
                 </Button>
               </div>
@@ -412,12 +412,7 @@ export default function HomePage() {
                   <CardFooter>
                     <Button 
                       asChild 
-                      className={`w-full ${
-                        plan.isPopular 
-                          ? "btn-primary" 
-                          : "btn-secondary"
-                      }`}
-                      variant={plan.isPopular ? "default" : "outline"}
+                      className={plan.isPopular ? "btn-primary btn-full" : "btn-secondary btn-full"}
                     >
                       {plan.title === "Enterprise" ? (
                         <Link href="/contact">{plan.buttonText}</Link>
@@ -456,10 +451,10 @@ export default function HomePage() {
                 Join thousands of content creators who are already using Quick Clips to grow their audience.
               </p>
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <Button asChild size="lg" className="h-12 px-8 text-base btn-primary">
+                <Button asChild className="btn-primary btn-lg">
                   <Link href="/signup">Start Your Free Trial</Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base btn-secondary">
+                <Button asChild className="btn-secondary btn-lg">
                   <Link href="/login">Sign In to Dashboard</Link>
                 </Button>
               </div>
