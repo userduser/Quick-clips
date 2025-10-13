@@ -11,6 +11,18 @@ export function LogoutModal() {
   const { closeModal, isClosing } = useAuthModal();
   const [isLoggingOut, setIsLoggingOut] = useState(false);
 
+  // Handle Escape key
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [closeModal]);
+
   const handleLogout = async () => {
     try {
       setIsLoggingOut(true);
