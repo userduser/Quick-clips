@@ -22,7 +22,7 @@ export function LogoutModal() {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 modal-overlay">
+    <div className={`fixed inset-0 z-50 flex items-center justify-center p-4 modal-overlay ${isClosing ? 'closing' : ''}`}>
       {/* Backdrop */}
       <div 
         className="absolute inset-0 bg-black/50 backdrop-blur-md"
@@ -30,7 +30,7 @@ export function LogoutModal() {
       />
       
       {/* Modal */}
-      <div className="relative w-full max-w-sm modal-content">
+      <div className={`relative w-full max-w-sm modal-content ${isClosing ? 'closing' : ''}`}>
         {/* Glow effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 via-red-500/10 to-red-500/20 rounded-2xl blur-xl" />
         
