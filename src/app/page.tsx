@@ -403,16 +403,10 @@ export default function HomePage() {
                     </ul>
                   </CardContent>
                   <CardFooter>
-                    <Button 
-                      asChild 
-                      className={plan.isPopular ? "btn-primary btn-full" : "btn-secondary btn-full"}
-                    >
-                      {plan.title === "Enterprise" ? (
-                        <Link href="/contact">{plan.buttonText}</Link>
-                      ) : (
-                        <Link href="/signup">{plan.buttonText}</Link>
-                      )}
-                    </Button>
+                    <PricingButton 
+                      plan={plan}
+                      className={plan.isPopular ? "btn-primary" : "btn-secondary"} 
+                    />
                   </CardFooter>
                 </Card>
               </ScrollReveal>
