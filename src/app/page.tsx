@@ -174,14 +174,7 @@ export default function HomePage() {
           </nav>
           <div className="flex items-center gap-3">
             <ScrollReveal direction="right" delay={100}>
-              <Button asChild className="btn-ghost">
-                <Link href="/login" prefetch={true}>Sign In</Link>
-              </Button>
-            </ScrollReveal>
-            <ScrollReveal direction="right" delay={200}>
-              <Button asChild className="btn-primary">
-                <Link href="/signup" prefetch={true}>Get Started</Link>
-              </Button>
+              <AuthButtons />
             </ScrollReveal>
           </div>
         </div>
