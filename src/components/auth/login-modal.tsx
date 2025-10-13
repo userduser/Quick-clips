@@ -162,6 +162,20 @@ export function LoginModal() {
                 Sign up
               </button>
             </div>
+
+            {/* Terms and Privacy */}
+            <div className="mt-4 text-center text-xs text-muted-foreground/70">
+              By continuing, you agree to Quick Clips's{" "}
+              <a href="/terms" target="_blank" className="text-primary hover:text-primary/80 underline">
+                Terms of Service
+              </a>
+              .{" "}
+              Read our{" "}
+              <a href="/privacy" target="_blank" className="text-primary hover:text-primary/80 underline">
+                Privacy Policy
+              </a>
+              .
+            </div>
           </form>
         </div>
       </div>
