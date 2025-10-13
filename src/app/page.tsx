@@ -216,9 +216,7 @@ export default function HomePage() {
             
             <ScrollReveal direction="up" delay={600}>
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <Button asChild className="btn-primary btn-lg">
-                  <Link href="/signup" prefetch={true}>Start Creating Clips</Link>
-                </Button>
+                <HeroAuthButton />
                 <Button asChild className="btn-secondary btn-lg">
                   <Link href="#features">See How It Works</Link>
                 </Button>
