@@ -359,6 +359,14 @@ export default function HomePage() {
                   <span className="text-primary font-semibold">✓ Instant activation</span>
                 </p>
               </div>
+              
+              {/* Pricing Toggle */}
+              <div className="mt-8">
+                <PricingToggle 
+                  isAnnual={isAnnual} 
+                  onToggle={togglePricing}
+                />
+              </div>
             </div>
           </ScrollReveal>
           
