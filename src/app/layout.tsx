@@ -44,6 +44,7 @@ export default function RootLayout({
     <html lang="en" className={geist.variable}>
       <body className="min-h-screen bg-background font-sans antialiased">
         {children}
+        <AuthModalProvider />
       </body>
     </html>
   );
