@@ -20,11 +20,11 @@ import { useAuthModal } from "~/hooks/use-auth-modal";
 
 const NavHeader = ({ credits, email }: { credits: number; email: string }) => {
   const { prefetchRoute } = useOptimizedRouter();
+  const { openLogout } = useAuthModal();
 
   // Prefetch common routes on component mount
   useEffect(() => {
     prefetchRoute("/dashboard/billing");
-    prefetchRoute("/login");
   }, [prefetchRoute]);
 
   return (
