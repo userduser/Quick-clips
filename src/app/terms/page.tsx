@@ -12,6 +12,20 @@ export default function TermsPage() {
       <header className="sticky top-0 z-50 border-b border-border/40 glass-card shadow-glow">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <QuickClipsLogo />
+          <nav className="hidden md:flex items-center space-x-6">
+            <Link href="/#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              Features
+            </Link>
+            <Link href="/#pricing" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              Pricing
+            </Link>
+            <Link href="/about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              About
+            </Link>
+            <Link href="/affiliate" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              Affiliate
+            </Link>
+          </nav>
           <AuthButtons />
         </div>
       </header>
