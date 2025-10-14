@@ -99,14 +99,7 @@ export default function AffiliatePage() {
               Affiliate
             </Link>
           </nav>
-          <div className="flex items-center gap-3">
-            <Button asChild variant="ghost" className="btn-ghost">
-              <Link href="/login">Sign In</Link>
-            </Button>
-            <Button asChild className="btn-primary">
-              <Link href="/signup">Get Started</Link>
-            </Button>
-          </div>
+          <AuthButtons />
         </div>
       </header>
 
