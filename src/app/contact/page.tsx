@@ -2,6 +2,8 @@ import Link from "next/link";
 import { Button } from "~/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 import QuickClipsLogo from "~/components/logo";
+import { Footer } from "~/components/footer";
+import { AuthButtons } from "~/components/auth-buttons";
 
 export default function ContactPage() {
   return (
