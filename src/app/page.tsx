@@ -15,7 +15,6 @@ import { Badge } from "~/components/ui/badge";
 import { ScrollReveal } from "~/components/scroll-reveal";
 import { AuthButtons } from "~/components/auth-buttons";
 import { HeroAuthButton } from "~/components/hero-auth-button";
-import { PricingButton } from "~/components/pricing-button";
 import { CTAAuthButtons } from "~/components/cta-auth-buttons";
 import { PricingToggle } from "~/components/pricing-toggle";
 import { EnhancedPriceDisplay } from "~/components/enhanced-price-display";
