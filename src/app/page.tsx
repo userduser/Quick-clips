@@ -439,10 +439,15 @@ export default function HomePage() {
                     </ul>
                   </CardContent>
                   <CardFooter>
-                    <PricingButton 
-                      plan={plan}
-                      className={plan.isPopular ? "btn-primary" : "btn-secondary"} 
-                    />
+                    <Button 
+                      asChild
+                      className={`w-full ${plan.isPopular ? "btn-primary" : "btn-secondary"}`}
+                      variant={plan.isPopular ? "default" : "outline"}
+                    >
+                      <Link href="/dashboard">
+                        {plan.buttonText}
+                      </Link>
+                    </Button>
                   </CardFooter>
                 </Card>
               </ScrollReveal>
