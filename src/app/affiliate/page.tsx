@@ -416,68 +416,7 @@ export default function AffiliatePage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border/40 bg-muted/20">
-        <div className="container mx-auto px-4 py-16">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-            <div className="space-y-4">
-              <QuickClipsLogo />
-              <p className="text-sm text-muted-foreground max-w-xs">
-                Transform your long-form content into viral social media clips with AI-powered precision.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4">Product</h3>
-              <ul className="space-y-2 text-sm">
-                <li><Link href="/#features" className="text-muted-foreground hover:text-foreground">Features</Link></li>
-                <li><Link href="/#pricing" className="text-muted-foreground hover:text-foreground">Pricing</Link></li>
-                <li><Link href="/dashboard" className="text-muted-foreground hover:text-foreground">Dashboard</Link></li>
-                <li><Link href="/api" className="text-muted-foreground hover:text-foreground">API</Link></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4">Company</h3>
-              <ul className="space-y-2 text-sm">
-                <li><Link href="/about" className="text-muted-foreground hover:text-foreground">About</Link></li>
-                <li><Link href="/contact" className="text-muted-foreground hover:text-foreground">Contact</Link></li>
-                <li><Link href="/affiliate" className="text-muted-foreground hover:text-foreground">Affiliate Program</Link></li>
-                <li><Link href="/careers" className="text-muted-foreground hover:text-foreground">Careers</Link></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4">Legal</h3>
-              <ul className="space-y-2 text-sm">
-                <li><Link href="/privacy" className="text-muted-foreground hover:text-foreground">Privacy Policy</Link></li>
-                <li><Link href="/terms" className="text-muted-foreground hover:text-foreground">Terms of Service</Link></li>
-                <li><Link href="/security" className="text-muted-foreground hover:text-foreground">Security</Link></li>
-                <li><Link href="/cookies" className="text-muted-foreground hover:text-foreground">Cookie Policy</Link></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-border/40 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between">
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Quick Clips. All rights reserved.
-            </p>
-            <div className="flex items-center space-x-4 mt-4 md:mt-0">
-              <Link href="https://twitter.com/quickclips" className="text-muted-foreground hover:text-foreground">
-                <span className="sr-only">Twitter</span>
-                𝕏
-              </Link>
-              <Link href="https://youtube.com/@quickclips" className="text-muted-foreground hover:text-foreground">
-                <span className="sr-only">YouTube</span>
-                📺
-              </Link>
-              <Link href="https://linkedin.com/company/quickclips" className="text-muted-foreground hover:text-foreground">
-                <span className="sr-only">LinkedIn</span>
-                💼
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
