@@ -69,9 +69,9 @@ export function MobileNav() {
         ${isOpen ? "translate-x-0" : "translate-x-full"}
       `}
       style={{
-        backgroundColor: 'rgba(0, 0, 0, 0.2)',
-        backdropFilter: 'blur(20px)',
-        WebkitBackdropFilter: 'blur(20px)'
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        backdropFilter: 'blur(40px)',
+        WebkitBackdropFilter: 'blur(40px)'
       }}
       >
         <nav className="flex flex-col p-6 space-y-6">
