@@ -63,45 +63,44 @@ export function LoginModal() {
   };
 
   return (
-    <div className={`fixed inset-0 z-50 flex items-center justify-center p-4 modal-overlay ${isClosing ? 'closing' : ''}`}>
-      {/* Backdrop */}
+    <div className={`fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 modal-overlay ${isClosing ? 'closing' : ''}`}>
+      {/* Backdrop with blur */}
       <div 
-        className="absolute inset-0 bg-black/50 backdrop-blur-md"
-        style={{ backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}
+        className="absolute inset-0 bg-black/60 backdrop-blur-xl"
         onClick={closeModal}
       />
       
-      {/* Modal */}
-      <div className={`relative w-full max-w-md modal-content ${isClosing ? 'closing' : ''}`}>
+      {/* Modal - responsive sizing */}
+      <div className={`relative w-full max-w-[95%] sm:max-w-md modal-content ${isClosing ? 'closing' : ''}`}>
         {/* Glow effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-primary/20 to-primary/30 rounded-2xl blur-xl" />
         
         {/* Main modal content */}
-        <div className="relative glass-card shadow-glow border border-primary/30 rounded-2xl overflow-hidden animate-float">
+        <div className="relative glass-card shadow-glow border border-primary/30 rounded-2xl overflow-hidden">
           {/* Close button */}
           <button
             onClick={closeModal}
-            className="absolute top-4 right-4 z-10 p-2 rounded-full bg-background/80 hover:bg-background transition-colors"
+            className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 p-2 rounded-full bg-background/80 hover:bg-background transition-colors"
           >
             <X className="w-4 h-4" />
           </button>
 
           {/* Header */}
-          <div className="px-8 pt-8 pb-2 text-center">
-            <div className="inline-block mb-6">
+          <div className="px-6 sm:px-8 pt-6 sm:pt-8 pb-2 text-center">
+            <div className="inline-block mb-4 sm:mb-6">
               <QuickClipsLogo />
             </div>
-            <h2 className="text-2xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
+            <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
               Welcome back
             </h2>
-            <p className="text-muted-foreground/80 mt-2">
+            <p className="text-sm sm:text-base text-muted-foreground/80 mt-2">
               Sign in to your Quick Clips account
             </p>
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit(onSubmit)} className="px-8 pb-8">
-            <div className="space-y-4">
+          <form onSubmit={handleSubmit(onSubmit)} className="px-6 sm:px-8 pb-6 sm:pb-8">
+            <div className="space-y-3 sm:space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-sm font-medium">
                   Email
@@ -142,7 +141,7 @@ export function LoginModal() {
               </div>
 
               {error && (
-                <div className="rounded-lg bg-red-500/10 border border-red-500/20 p-4 text-sm text-red-400 flex items-center gap-3">
+                <div className="rounded-lg bg-red-500/10 border border-red-500/20 p-3 sm:p-4 text-sm text-red-400 flex items-center gap-3">
                   <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
                   <span>{error}</span>
                 </div>
@@ -165,7 +164,7 @@ export function LoginModal() {
             </div>
 
             {/* Switch to signup */}
-            <div className="mt-6 text-center text-sm border-t border-border/30 pt-6">
+            <div className="mt-4 sm:mt-6 text-center text-sm border-t border-border/30 pt-4 sm:pt-6">
               <span className="text-muted-foreground">Don&apos;t have an account? </span>
               <button
                 type="button"
@@ -177,7 +176,7 @@ export function LoginModal() {
             </div>
 
             {/* Terms and Privacy */}
-            <div className="mt-4 text-center text-xs text-muted-foreground/70">
+            <div className="mt-3 sm:mt-4 text-center text-xs text-muted-foreground/70">
               By continuing, you agree to Quick Clips's{" "}
               <a href="/terms" target="_blank" className="text-primary hover:text-primary/80 underline">
                 Terms of Service
