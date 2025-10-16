@@ -10,16 +10,15 @@ import {
   CardHeader,
   CardTitle,
 } from "~/components/ui/card";
-import QuickClipsLogo from "~/components/logo";
 import { Badge } from "~/components/ui/badge";
 import { ScrollReveal } from "~/components/scroll-reveal";
-import { AuthButtons } from "~/components/auth-buttons";
 import { HeroAuthButton } from "~/components/hero-auth-button";
 import { CTAAuthButtons } from "~/components/cta-auth-buttons";
 import { PricingToggle } from "~/components/pricing-toggle";
 import { EnhancedPriceDisplay } from "~/components/enhanced-price-display";
 import { usePricingToggle } from "~/hooks/use-pricing-toggle";
 import { SessionAwareFooter } from "~/components/session-aware-footer";
+import { PageHeader } from "~/components/page-header";
 
 const subscriptionPlans = [
   {
