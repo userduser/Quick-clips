@@ -61,18 +61,14 @@ export function MobileNav() {
         />
       </button>
 
-      {/* Mobile Menu - with blurred background */}
+      {/* Mobile Menu - with blurred background using Tailwind */}
       <div className={`
         fixed top-16 right-0 w-64 h-[calc(100vh-4rem)] 
+        bg-black/70 backdrop-blur-2xl
         border-l border-border/40 shadow-2xl z-50 md:hidden
         transform transition-transform duration-300 ease-in-out
         ${isOpen ? "translate-x-0" : "translate-x-full"}
       `}
-      style={{
-        backgroundColor: 'rgba(18, 18, 18, 0.85)',
-        backdropFilter: 'saturate(180%) blur(20px)',
-        WebkitBackdropFilter: 'saturate(180%) blur(20px)'
-      }}
       >
         <nav className="flex flex-col p-6 space-y-6">
           <Link 
