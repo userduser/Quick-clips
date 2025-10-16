@@ -154,40 +154,7 @@ export default function HomePage() {
   return (
     <main className="flex min-h-screen flex-col bg-background">
       {/* Navigation */}
-      <header className="sticky top-0 z-50 border-b border-border/40 glass-card shadow-glow">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4">
-          <ScrollReveal direction="left">
-            <QuickClipsLogo />
-          </ScrollReveal>
-          <nav className="hidden md:flex items-center space-x-6 left-1/2 -translate-x-1/2 absolute">
-            <ScrollReveal direction="up" delay={100}>
-              <Link href="#features" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-300">
-                Features
-              </Link>
-            </ScrollReveal>
-            <ScrollReveal direction="up" delay={150}>
-              <Link href="#pricing" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-300">
-                Pricing
-              </Link>
-            </ScrollReveal>
-            <ScrollReveal direction="up" delay={200}>
-              <Link href="/about" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-300">
-                About
-              </Link>
-            </ScrollReveal>
-            <ScrollReveal direction="up" delay={250}>
-              <Link href="/affiliate" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-300">
-                Affiliate
-              </Link>
-            </ScrollReveal>
-          </nav>
-          <div className="flex items-center gap-3">
-            <ScrollReveal direction="right" delay={100}>
-              <AuthButtons />
-            </ScrollReveal>
-          </div>
-        </div>
-      </header>
+      <PageHeader />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-background via-muted/10 to-primary/5">
