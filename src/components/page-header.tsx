@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import QuickClipsLogo from "~/components/logo";
-import { MobileLogo } from "~/components/mobile-logo";
 import { ScrollReveal } from "~/components/scroll-reveal";
 import { AuthButtons } from "~/components/auth-buttons";
 import { MobileNav } from "~/components/mobile-nav";
@@ -11,15 +10,10 @@ export function PageHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/40 glass-card shadow-glow">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        {/* Desktop Logo */}
-        <div className="hidden md:block">
-          <ScrollReveal direction="left">
-            <QuickClipsLogo />
-          </ScrollReveal>
-        </div>
-        
-        {/* Mobile Logo (Q only) */}
-        <MobileLogo />
+        {/* Logo - shows Q only on mobile, full logo on desktop */}
+        <ScrollReveal direction="left">
+          <QuickClipsLogo />
+        </ScrollReveal>
         
         {/* Desktop Navigation - Centered */}
         <nav className="hidden md:flex items-center space-x-6 left-1/2 -translate-x-1/2 absolute">
