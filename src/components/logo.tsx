@@ -25,9 +25,9 @@ const QuickClipsLogo = ({ variant = "full", className = "", href = "/" }: LogoPr
         />
       </svg>
       
-      {/* Text part - hidden on mobile, visible on desktop */}
+      {/* Text part - always visible */}
       {variant === "full" && (
-        <span className="ml-[-0.5px] text-[20px] font-bold tracking-tight hidden md:inline">
+        <span className="ml-[-0.5px] text-[20px] font-bold tracking-tight">
           <span className="text-primary">uick</span>
           <span className="text-foreground ml-1">clips</span>
         </span>
