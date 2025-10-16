@@ -6,11 +6,11 @@ import { useAuthModal } from "~/hooks/use-auth-modal";
 
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
-  const { onOpen } = useAuthModal();
+  const { openLogin } = useAuthModal();
 
   const handleAuthClick = () => {
     setIsOpen(false);
-    onOpen("login");
+    openLogin();
   };
 
   return (
