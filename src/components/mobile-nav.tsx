@@ -3,40 +3,75 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useAuthModal } from "~/hooks/use-auth-modal";
+import { useSession, signOut } from "next-auth/react";
 
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
-  const { openLogin } = useAuthModal();
+  const { openLogin, openSignup } = useAuthModal();
+  const { data: session } = useSession();
 
-  const handleAuthClick = () => {
+  const handleSignIn = () => {
     setIsOpen(false);
     openLogin();
   };
 
+  const handleSignUp = () => {
+    setIsOpen(false);
+    openSignup();
+  };
+
+  const handleLogout = () => {
+    setIsOpen(false);
+    signOut();
+  };
+
   return (
     <>
-      {/* Hamburger Button */}
+      {/* Styled Hamburger Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden flex flex-col gap-1.5 p-2"
+        className="md:hidden flex flex-col gap-1.5 p-2 relative"
         aria-label="Toggle menu"
       >
-        <span className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${isOpen ? "rotate-45 translate-y-2" : ""}`} />
-        <span className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${isOpen ? "opacity-0" : ""}`} />
-        <span className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+        {/* Top line - gradient */}
+        <span 
+          className={`w-6 h-0.5 transition-all duration-300 ${isOpen ? "rotate-45 translate-y-2" : ""}`}
+          style={{
+            background: 'linear-gradient(90deg, #f56800 0%, #ff8c3a 100%)',
+            boxShadow: '0 0 8px rgba(245, 104, 0, 0.6)'
+          }}
+        />
+        {/* Middle line - transparent with orange border and glow */}
+        <span 
+          className={`w-6 h-0.5 transition-all duration-300 ${isOpen ? "opacity-0" : ""}`}
+          style={{
+            background: 'transparent',
+            border: '1px solid #f56800',
+            boxShadow: '0 0 10px rgba(245, 104, 0, 0.8), inset 0 0 10px rgba(245, 104, 0, 0.3)'
+          }}
+        />
+        {/* Bottom line - gradient */}
+        <span 
+          className={`w-6 h-0.5 transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-2" : ""}`}
+          style={{
+            background: 'linear-gradient(90deg, #f56800 0%, #ff8c3a 100%)',
+            boxShadow: '0 0 8px rgba(245, 104, 0, 0.6)'
+          }}
+        />
       </button>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay - lighter */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"
+          className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40 md:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - with blur and lighter background */}
       <div className={`
-        fixed top-16 right-0 w-64 h-[calc(100vh-4rem)] bg-background/95 backdrop-blur-lg
+        fixed top-16 right-0 w-64 h-[calc(100vh-4rem)] 
+        bg-background/80 backdrop-blur-xl
         border-l border-border/40 shadow-2xl z-50 md:hidden
         transform transition-transform duration-300 ease-in-out
         ${isOpen ? "translate-x-0" : "translate-x-full"}
@@ -71,13 +106,31 @@ export function MobileNav() {
             Affiliate
           </Link>
           
-          <div className="pt-6 border-t border-border/40">
-            <button
-              onClick={handleAuthClick}
-              className="w-full btn-primary text-center"
-            >
-              Sign In / Sign Up
-            </button>
+          {/* Auth Buttons Section */}
+          <div className="pt-6 border-t border-border/40 space-y-3">
+            {session ? (
+              <button
+                onClick={handleLogout}
+                className="w-full btn-secondary text-center"
+              >
+                Log Out
+              </button>
+            ) : (
+              <>
+                <button
+                  onClick={handleSignIn}
+                  className="w-full btn-ghost text-center"
+                >
+                  Sign In
+                </button>
+                <button
+                  onClick={handleSignUp}
+                  className="w-full btn-primary text-center"
+                >
+                  Sign Up
+                </button>
+              </>
+            )}
           </div>
         </nav>
       </div>
