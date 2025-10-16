@@ -171,7 +171,7 @@ export function SignupModal() {
             </div>
 
             {/* Switch to login */}
-            <div className="mt-6 text-center text-sm border-t border-border/30 pt-6">
+            <div className="mt-4 sm:mt-6 text-center text-sm border-t border-border/30 pt-4 sm:pt-6">
               <span className="text-muted-foreground">Already have an account? </span>
               <button
                 type="button"
