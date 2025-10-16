@@ -3,12 +3,13 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useAuthModal } from "~/hooks/use-auth-modal";
-import { useSession, signOut } from "next-auth/react";
 
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
-  const { openLogin, openSignup } = useAuthModal();
-  const { data: session } = useSession();
+  const { openLogin, openSignup, openLogout } = useAuthModal();
+  // For now, we'll just show sign in/up buttons
+  // TODO: Implement proper auth check when backend auth is integrated
+  const isLoggedIn = false;
 
   const handleSignIn = () => {
     setIsOpen(false);
@@ -22,7 +23,7 @@ export function MobileNav() {
 
   const handleLogout = () => {
     setIsOpen(false);
-    signOut();
+    openLogout();
   };
 
   return (
@@ -108,7 +109,7 @@ export function MobileNav() {
           
           {/* Auth Buttons Section */}
           <div className="pt-6 border-t border-border/40 space-y-3">
-            {session ? (
+            {isLoggedIn ? (
               <button
                 onClick={handleLogout}
                 className="w-full btn-secondary text-center"
