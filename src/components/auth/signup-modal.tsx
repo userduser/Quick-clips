@@ -83,30 +83,30 @@ export function SignupModal() {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/35 via-primary/25 to-primary/35 rounded-2xl blur-xl" />
         
         {/* Main modal content */}
-        <div className="relative glass-card shadow-glow border border-primary/35 rounded-2xl overflow-hidden animate-float" style={{animationDelay: '0.3s'}}>
+        <div className="relative glass-card shadow-glow border border-primary/35 rounded-2xl overflow-hidden" style={{animationDelay: '0.3s'}}>
           {/* Close button */}
           <button
             onClick={closeModal}
-            className="absolute top-4 right-4 z-10 p-2 rounded-full bg-background/80 hover:bg-background transition-colors"
+            className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 p-2 rounded-full bg-background/80 hover:bg-background transition-colors"
           >
             <X className="w-4 h-4" />
           </button>
 
           {/* Header */}
-          <div className="px-8 pt-8 pb-2 text-center">
-            <div className="inline-block mb-6">
+          <div className="px-6 sm:px-8 pt-6 sm:pt-8 pb-2 text-center">
+            <div className="inline-block mb-4 sm:mb-6">
               <QuickClipsLogo />
             </div>
-            <h2 className="text-2xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
+            <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
               Get started today
             </h2>
-            <p className="text-muted-foreground/80 mt-2">
+            <p className="text-sm sm:text-base text-muted-foreground/80 mt-2">
               Create your Quick Clips account and start making viral clips
             </p>
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit(onSubmit)} className="px-8 pb-8">
+          <form onSubmit={handleSubmit(onSubmit)} className="px-6 sm:px-8 pb-6 sm:pb-8">
             <div className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-sm font-medium">
