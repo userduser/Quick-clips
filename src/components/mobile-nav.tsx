@@ -61,22 +61,19 @@ export function MobileNav() {
         />
       </button>
 
-      {/* Mobile Menu Overlay - lighter */}
-      {isOpen && (
-        <div 
-          className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40 md:hidden"
-          onClick={() => setIsOpen(false)}
-        />
-      )}
-
-      {/* Mobile Menu - with blur and lighter background */}
+      {/* Mobile Menu - with lighter blurred background, no overlay */}
       <div className={`
         fixed top-16 right-0 w-64 h-[calc(100vh-4rem)] 
-        bg-background/80 backdrop-blur-xl
         border-l border-border/40 shadow-2xl z-50 md:hidden
         transform transition-transform duration-300 ease-in-out
         ${isOpen ? "translate-x-0" : "translate-x-full"}
-      `}>
+      `}
+      style={{
+        backgroundColor: 'rgba(0, 0, 0, 0.2)',
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)'
+      }}
+      >
         <nav className="flex flex-col p-6 space-y-6">
           <Link 
             href="/#features" 
