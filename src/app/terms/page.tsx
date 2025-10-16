@@ -1,34 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import QuickClipsLogo from "~/components/logo";
 import { Footer } from "~/components/footer";
-import { AuthButtons } from "~/components/auth-buttons";
+import { PageHeader } from "~/components/page-header";
 
 export default function TermsPage() {
   return (
     <main className="flex min-h-screen flex-col bg-background">
       {/* Navigation */}
-      <header className="sticky top-0 z-50 border-b border-border/40 glass-card shadow-glow">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4">
-          <QuickClipsLogo />
-          <nav className="hidden md:flex items-center space-x-6">
-            <Link href="/#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              Features
-            </Link>
-            <Link href="/#pricing" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              Pricing
-            </Link>
-            <Link href="/about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              About
-            </Link>
-            <Link href="/affiliate" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              Affiliate
-            </Link>
-          </nav>
-          <AuthButtons />
-        </div>
-      </header>
+      <PageHeader />
 
       <div className="container mx-auto px-4 py-20 max-w-4xl">
         <h1 className="text-4xl font-bold tracking-tight mb-8">Terms of Service</h1>
