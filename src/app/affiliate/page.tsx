@@ -2,9 +2,8 @@ import Link from "next/link";
 import { Button } from "~/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "~/components/ui/card";
 import { Badge } from "~/components/ui/badge";
-import QuickClipsLogo from "~/components/logo";
 import { Footer } from "~/components/footer";
-import { AuthButtons } from "~/components/auth-buttons";
+import { PageHeader } from "~/components/page-header";
 
 const commissionTiers = [
   {
