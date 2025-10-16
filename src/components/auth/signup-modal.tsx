@@ -70,16 +70,15 @@ export function SignupModal() {
   };
 
   return (
-    <div className={`fixed inset-0 z-50 flex items-center justify-center p-4 modal-overlay ${isClosing ? 'closing' : ''}`}>
-      {/* Backdrop */}
+    <div className={`fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 modal-overlay ${isClosing ? 'closing' : ''}`}>
+      {/* Backdrop with blur */}
       <div 
-        className="absolute inset-0 bg-black/50 backdrop-blur-md"
-        style={{ backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}
+        className="absolute inset-0 bg-black/60 backdrop-blur-xl"
         onClick={closeModal}
       />
       
-      {/* Modal */}
-      <div className={`relative w-full max-w-md modal-content ${isClosing ? 'closing' : ''}`}>
+      {/* Modal - responsive sizing */}
+      <div className={`relative w-full max-w-[95%] sm:max-w-md modal-content ${isClosing ? 'closing' : ''}`}>
         {/* Glow effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary/35 via-primary/25 to-primary/35 rounded-2xl blur-xl" />
         
