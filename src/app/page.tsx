@@ -152,7 +152,7 @@ export default function HomePage() {
   const { isAnnual, isAnimating, togglePricing, getBillingInfo } = usePricingToggle();
   
   return (
-    <main className="flex min-h-screen flex-col bg-background">
+    <main className="flex min-h-screen flex-col bg-background overflow-x-hidden">
       {/* Navigation */}
       <PageHeader />
 
