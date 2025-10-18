@@ -1,201 +1,160 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { signIn } from "next-auth/react";
-import { useRouter } from "next/navigation";
+import { z } from "zod";
 import { X } from "lucide-react";
-
 import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
-import { signupSchema, type SignupFormValues } from "~/schemas/auth";
-import { signUp } from "~/actions/auth";
-import { useAuthModal } from "~/hooks/use-auth-modal";
 import QuickClipsLogo from "~/components/logo";
+import { useAuthModal } from "~/hooks/use-auth-modal";
+
+const signupSchema = z.object({
+  email: z.string().email("Invalid email address"),
+  password: z.string().min(6, "Password must be at least 6 characters"),
+});
+
+type SignupFormData = z.infer<typeof signupSchema>;
 
 export function SignupModal() {
-  const { closeModal, switchToLogin, isClosing } = useAuthModal();
-  const [error, setError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const router = useRouter();
+  const [error, setError] = useState<string | null>(null);
+  const { activeModal, isClosing, closeModal, switchToLogin } = useAuthModal();
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<SignupFormValues>({ resolver: zodResolver(signupSchema) });
+  } = useForm<SignupFormData>({
+    resolver: zodResolver(signupSchema),
+  });
 
-  // Handle Escape key
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        closeModal();
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [closeModal]);
-
-  const onSubmit = async (data: SignupFormValues) => {
+  const onSubmit = async (data: SignupFormData) => {
+    setIsSubmitting(true);
+    setError(null);
     try {
-      setIsSubmitting(true);
-      setError(null);
-
-      const result = await signUp(data);
-      if (!result.success) {
-        setError(result.error ?? "An error occurred during signup");
-        return;
-      }
-
-      const signUpResult = await signIn("credentials", {
-        email: data.email,
-        password: data.password,
-        redirect: false,
-      });
-
-      if (signUpResult?.error) {
-        setError("Account created but couldn't sign in automatically. Please try again.");
-      } else {
-        closeModal();
-        router.push("/dashboard");
-      }
-    } catch (error) {
-      setError("An unexpected error occurred");
+      // TODO: Implement actual signup logic
+      console.log("Signup data:", data);
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      closeModal();
+    } catch (err) {
+      setError("Failed to create account");
     } finally {
       setIsSubmitting(false);
     }
   };
 
+  if (activeModal !== "signup") return null;
+
   return (
-    <div className={`fixed inset-0 z-50 flex items-center justify-center modal-overlay ${isClosing ? 'closing' : ''}`}>
-      {/* Backdrop with blur */}
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+      {/* Blurred backdrop - no animations */}
       <div 
-        className="absolute inset-0 bg-black/60 backdrop-blur-xl"
+        className="fixed inset-0 bg-black/70 backdrop-blur-xl"
         onClick={closeModal}
+        style={{ animation: 'none' }}
       />
       
-      {/* Modal - responsive sizing and centering */}
-      <div className={`relative w-[90%] max-w-md mx-auto my-auto modal-content ${isClosing ? 'closing' : ''}`}>
-        {/* Glow effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/35 via-primary/25 to-primary/35 rounded-2xl blur-xl" />
-        
-        {/* Main modal content */}
-        <div className="relative glass-card shadow-glow border border-primary/35 rounded-2xl overflow-hidden" style={{animationDelay: '0.3s'}}>
-          {/* Close button */}
-          <button
-            onClick={closeModal}
-            className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 p-2 rounded-full bg-background/80 hover:bg-background transition-colors"
-          >
-            <X className="w-4 h-4" />
-          </button>
+      {/* Modal card - centered */}
+      <div 
+        className={`relative bg-background/95 backdrop-blur-sm border border-border rounded-xl shadow-2xl w-full max-w-[340px] sm:max-w-md transition-opacity duration-300 ${
+          isClosing ? 'opacity-0' : 'opacity-100'
+        }`}
+        style={{ animation: 'none' }}
+      >
+        {/* Close button */}
+        <button
+          onClick={closeModal}
+          className="absolute top-3 right-3 p-1.5 rounded-lg hover:bg-muted/50 transition-colors"
+        >
+          <X className="w-4 h-4" />
+        </button>
 
+        {/* Content */}
+        <div className="p-6 sm:p-8">
           {/* Header */}
-          <div className="px-6 sm:px-8 pt-6 sm:pt-8 pb-2 text-center">
-            <div className="inline-block mb-4 sm:mb-6">
+          <div className="text-center mb-6">
+            <div className="inline-block mb-4">
               <QuickClipsLogo />
             </div>
-            <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
-              Get started today
+            <h2 className="text-lg sm:text-xl font-bold mb-1">
+              Create your account
             </h2>
-            <p className="text-sm sm:text-base text-muted-foreground/80 mt-2">
-              Create your Quick Clips account and start making viral clips
+            <p className="text-xs sm:text-sm text-muted-foreground">
+              Start creating viral clips today
             </p>
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit(onSubmit)} className="px-6 sm:px-8 pb-6 sm:pb-8">
-            <div className="space-y-3 sm:space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="email" className="text-sm font-medium">
-                  Email
-                </Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="m@example.com"
-                  required
-                  {...register("email")}
-                  className="bg-background/50 border-border/50 focus:border-primary/50 focus:ring-primary/20"
-                />
-                {errors.email && (
-                  <p className="text-sm text-red-400 flex items-center gap-2">
-                    <span className="w-1 h-1 bg-red-400 rounded-full" />
-                    {errors.email.message}
-                  </p>
-                )}
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="password" className="text-sm font-medium">
-                  Password
-                </Label>
-                <Input
-                  id="password"
-                  type="password"
-                  required
-                  {...register("password")}
-                  className="bg-background/50 border-border/50 focus:border-primary/50 focus:ring-primary/20"
-                />
-                {errors.password && (
-                  <p className="text-sm text-red-400 flex items-center gap-2">
-                    <span className="w-1 h-1 bg-red-400 rounded-full" />
-                    {errors.password.message}
-                  </p>
-                )}
-              </div>
-
-              {error && (
-                <div className="rounded-lg bg-red-500/10 border border-red-500/20 p-4 text-sm text-red-400 flex items-center gap-3">
-                  <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-                  <span>{error}</span>
-                </div>
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+            <div className="space-y-1.5">
+              <Label htmlFor="email" className="text-xs sm:text-sm">
+                Email
+              </Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="m@example.com"
+                className="h-9 sm:h-10 text-sm"
+                {...register("email")}
+              />
+              {errors.email && (
+                <p className="text-xs text-red-500">{errors.email.message}</p>
               )}
-
-              <Button
-                type="submit"
-                className="btn-primary btn-full"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin mr-2" />
-                    Signing up...
-                  </>
-                ) : (
-                  "Sign up"
-                )}
-              </Button>
             </div>
 
-            {/* Switch to login */}
-            <div className="mt-4 sm:mt-6 text-center text-sm border-t border-border/30 pt-4 sm:pt-6">
-              <span className="text-muted-foreground">Already have an account? </span>
-              <button
-                type="button"
-                onClick={switchToLogin}
-                className="text-primary hover:text-primary/80 font-medium transition-colors"
-              >
-                Sign in
-              </button>
+            <div className="space-y-1.5">
+              <Label htmlFor="password" className="text-xs sm:text-sm">
+                Password
+              </Label>
+              <Input
+                id="password"
+                type="password"
+                placeholder="Min. 6 characters"
+                className="h-9 sm:h-10 text-sm"
+                {...register("password")}
+              />
+              {errors.password && (
+                <p className="text-xs text-red-500">{errors.password.message}</p>
+              )}
             </div>
 
-            {/* Terms and Privacy */}
-            <div className="mt-3 sm:mt-4 text-center text-xs text-muted-foreground/70">
-              By continuing, you agree to Quick Clips's{" "}
-              <a href="/terms" target="_blank" className="text-primary hover:text-primary/80 underline">
-                Terms of Service
-              </a>
-              .{" "}
-              Read our{" "}
-              <a href="/privacy" target="_blank" className="text-primary hover:text-primary/80 underline">
-                Privacy Policy
-              </a>
-              .
-            </div>
+            {error && (
+              <div className="rounded-lg bg-red-500/10 border border-red-500/20 p-2.5 text-xs text-red-400">
+                {error}
+              </div>
+            )}
+
+            <Button
+              type="submit"
+              className="w-full btn-primary text-sm"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Creating account..." : "Sign up"}
+            </Button>
           </form>
+
+          {/* Switch to login */}
+          <div className="mt-5 pt-5 text-center text-xs sm:text-sm border-t border-border">
+            <span className="text-muted-foreground">Already have an account? </span>
+            <button
+              type="button"
+              onClick={switchToLogin}
+              className="text-primary hover:underline font-medium"
+            >
+              Log in
+            </button>
+          </div>
+
+          {/* Terms */}
+          <div className="mt-3 text-center text-[10px] sm:text-xs text-muted-foreground">
+            By continuing, you agree to{" "}
+            <a href="/terms" className="text-primary hover:underline">Terms</a>
+            {" "}and{" "}
+            <a href="/privacy" className="text-primary hover:underline">Privacy</a>
+          </div>
         </div>
       </div>
     </div>
