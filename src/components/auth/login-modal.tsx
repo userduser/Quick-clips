@@ -63,15 +63,15 @@ export function LoginModal() {
   };
 
   return (
-    <div className={`fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 modal-overlay ${isClosing ? 'closing' : ''}`}>
+    <div className={`fixed inset-0 z-50 flex items-center justify-center modal-overlay ${isClosing ? 'closing' : ''}`}>
       {/* Backdrop with blur */}
       <div 
         className="absolute inset-0 bg-black/60 backdrop-blur-xl"
         onClick={closeModal}
       />
       
-      {/* Modal - responsive sizing */}
-      <div className={`relative w-full max-w-[95%] sm:max-w-md modal-content ${isClosing ? 'closing' : ''}`}>
+      {/* Modal - responsive sizing and centering */}
+      <div className={`relative w-[90%] max-w-md mx-auto my-auto modal-content ${isClosing ? 'closing' : ''}`}>
         {/* Glow effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-primary/20 to-primary/30 rounded-2xl blur-xl" />
         
