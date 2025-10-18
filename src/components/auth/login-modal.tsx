@@ -52,14 +52,14 @@ export function LoginModal() {
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
       {/* Blurred backdrop - no animations */}
       <div 
-        className="fixed inset-0 bg-black/70 backdrop-blur-xl"
+        className="fixed inset-0 bg-black/70 backdrop-blur-xl -z-10"
         onClick={closeModal}
         style={{ animation: 'none' }}
       />
       
       {/* Modal card - centered */}
       <div 
-        className={`relative bg-background/95 backdrop-blur-sm border border-border rounded-xl shadow-2xl w-full max-w-[340px] sm:max-w-md transition-opacity duration-300 ${
+        className={`relative z-10 bg-background/95 backdrop-blur-sm border border-border rounded-xl shadow-2xl w-full max-w-[340px] sm:max-w-md mx-auto transition-opacity duration-300 ${
           isClosing ? 'opacity-0' : 'opacity-100'
         }`}
         style={{ animation: 'none' }}
