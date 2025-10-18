@@ -60,7 +60,7 @@ export const ScrollReveal = ({
   return (
     <div
       ref={ref}
-      className={className}
+      className={`${className} ${direction === 'right' || direction === 'left' ? 'max-w-full' : ''}`}
       style={{
         opacity: isVisible ? 1 : 0,
         transform: getTransform(),
