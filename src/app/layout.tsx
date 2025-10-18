@@ -41,8 +41,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={geist.variable}>
-      <body className="min-h-screen bg-background font-sans antialiased">
+    <html lang="en" className={`${geist.variable} overflow-x-hidden`}>
+      <body className="min-h-screen bg-background font-sans antialiased overflow-x-hidden">
         <Providers>
           {children}
         </Providers>
