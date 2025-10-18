@@ -155,6 +155,6 @@ export function SignupModal() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
