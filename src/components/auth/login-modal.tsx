@@ -154,6 +154,6 @@ export function LoginModal() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
