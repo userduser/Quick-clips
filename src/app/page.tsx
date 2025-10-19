@@ -325,6 +325,42 @@ export default function HomePage() {
                 </p>
               </div>
               
+              {/* Pricing Comparison Section */}
+              <div className="mt-8 max-w-4xl mx-auto">
+                <div className="glass-card shadow-glow rounded-xl p-6 border-2 border-primary/20">
+                  <div className="text-center mb-4">
+                    <h3 className="text-xl font-bold mb-2">
+                      <span className="text-primary">Most Affordable</span> in the Industry
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      We're literally the cheapest. Our competitors charge 3-5x more for similar features.
+                    </p>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                    <div className="text-center p-3 bg-background/50 rounded-lg border border-border/40">
+                      <p className="text-xs text-muted-foreground mb-1">Competitor A</p>
+                      <p className="text-xl font-bold text-muted-foreground line-through">$29/mo</p>
+                    </div>
+                    <div className="text-center p-3 bg-background/50 rounded-lg border border-border/40">
+                      <p className="text-xs text-muted-foreground mb-1">Competitor B</p>
+                      <p className="text-xl font-bold text-muted-foreground line-through">$49/mo</p>
+                    </div>
+                    <div className="text-center p-3 bg-primary/10 rounded-lg border-2 border-primary shadow-glow">
+                      <p className="text-xs text-primary mb-1 font-semibold">Quick Clips</p>
+                      <p className="text-xl font-bold text-primary">$6.49/mo</p>
+                      <p className="text-xs text-primary mt-1">✓ Best Value</p>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-4 text-center">
+                    <p className="text-xs text-muted-foreground">
+                      <span className="text-primary font-semibold">Save 80%</span> compared to industry alternatives
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
               {/* Pricing Toggle */}
               <div className="mt-8">
                 <PricingToggle 
