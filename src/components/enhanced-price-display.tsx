@@ -17,14 +17,14 @@ export function EnhancedPriceDisplay({
   isAnimating,
   className = "" 
 }: EnhancedPriceDisplayProps) {
-  // Extract number from price string (e.g., "$29" -> 29)
+  // Extract number from price string (e.g., "$29" or "$14.49" -> 29 or 14.49)
   const extractNumber = (priceStr: string) => {
-    const match = priceStr.match(/\d+/);
-    return match ? parseInt(match[0]) : 0;
+    const match = priceStr.match(/[\d.]+/);
+    return match ? parseFloat(match[0]) : 0;
   };
 
   const monthlyNum = extractNumber(monthlyPrice);
-  const yearlyNum = Math.round(extractNumber(yearlyPrice) / 12);
+  const yearlyNum = parseFloat((extractNumber(yearlyPrice) / 12).toFixed(2));
 
   const currentPrice = isAnnual ? yearlyNum : monthlyNum;
   const previousPrice = isAnnual ? monthlyNum : yearlyNum;
