@@ -23,9 +23,10 @@ export function PricingToggle({ isAnnual, onToggle }: PricingToggleProps) {
       {/* Toggle Switch */}
       <button
         onClick={() => onToggle(!isAnnual)}
-        className="relative inline-flex h-8 w-16 items-center rounded-full bg-muted transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background"
+        className="relative inline-flex h-8 w-16 items-center rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background border-2"
         style={{
-          backgroundColor: isAnnual ? '#f56800' : 'hsl(var(--muted))',
+          backgroundColor: 'hsl(var(--muted))',
+          borderColor: isAnnual ? '#f56800' : 'transparent',
         }}
       >
         {/* Switch Circle */}
@@ -35,17 +36,6 @@ export function PricingToggle({ isAnnual, onToggle }: PricingToggleProps) {
           }`}
           style={{
             boxShadow: '0 2px 8px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.1)',
-          }}
-        />
-        
-        {/* Animated background glow */}
-        <div 
-          className={`absolute inset-0 rounded-full transition-opacity duration-300 ${
-            isAnnual ? 'opacity-100' : 'opacity-0'
-          }`}
-          style={{
-            background: 'linear-gradient(135deg, #f56800 0%, #cc5500 100%)',
-            boxShadow: '0 0 20px rgba(245, 104, 0, 0.4)',
           }}
         />
       </button>
