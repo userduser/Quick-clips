@@ -62,13 +62,18 @@ export function MobileNav() {
       </button>
 
       {/* Mobile Menu - with blurred background */}
-      <div className={`
-        fixed top-16 w-64 h-[calc(100vh-4rem)] 
-        bg-black/70 backdrop-blur-2xl
-        border-l border-border/40 shadow-2xl z-50 md:hidden
-        transition-all duration-300 ease-in-out
-        ${isOpen ? "right-0" : "-right-64"}
-      `}
+      <div 
+        className={`
+          fixed top-16 w-64 h-[calc(100vh-4rem)] 
+          bg-black/70 backdrop-blur-2xl
+          border-l border-border/40 shadow-2xl z-50 md:hidden
+          transition-all duration-300 ease-in-out
+          ${isOpen ? "right-0" : "-right-64"}
+        `}
+        style={{
+          WebkitBackdropFilter: 'blur(40px)',
+          backdropFilter: 'blur(40px)'
+        }}
       >
         <nav className="flex flex-col p-6 space-y-6">
           <Link 
