@@ -68,9 +68,11 @@ export function MobileNav() {
           fixed top-16 w-64 h-[calc(100vh-4rem)] 
           bg-black/70
           border-l border-border/40 shadow-2xl z-50 md:hidden
-          transition-all duration-300 ease-in-out
           ${isOpen ? "right-0" : "-right-64"}
         `}
+        style={{
+          transition: 'right 0.3s ease-in-out'
+        }}
       >
         <nav className="flex flex-col p-6 space-y-6">
           <Link 
