@@ -61,13 +61,13 @@ export function MobileNav() {
         />
       </button>
 
-      {/* Mobile Menu - with blurred background using Tailwind */}
+      {/* Mobile Menu - with blurred background */}
       <div className={`
-        fixed top-16 right-0 w-64 h-[calc(100vh-4rem)] 
+        fixed top-16 w-64 h-[calc(100vh-4rem)] 
         bg-black/70 backdrop-blur-2xl
         border-l border-border/40 shadow-2xl z-50 md:hidden
-        transform transition-transform duration-300 ease-in-out
-        ${isOpen ? "translate-x-0" : "translate-x-full"}
+        transition-all duration-300 ease-in-out
+        ${isOpen ? "right-0" : "-right-64"}
       `}
       >
         <nav className="flex flex-col p-6 space-y-6">
