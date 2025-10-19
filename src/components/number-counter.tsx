@@ -39,7 +39,9 @@ export function NumberCounter({
         const easeOutQuart = 1 - Math.pow(1 - progress, 4);
         const newNumber = from + (difference * easeOutQuart);
         
-        setCurrentNumber(Math.round(newNumber));
+        // Check if numbers have decimals and format accordingly
+        const hasDecimals = (to % 1 !== 0) || (from % 1 !== 0);
+        setCurrentNumber(hasDecimals ? parseFloat(newNumber.toFixed(2)) : Math.round(newNumber));
         
         if (progress < 1) {
           requestAnimationFrame(updateNumber);
