@@ -393,14 +393,17 @@ export default function HomePage() {
                       {plan.maxVideos}
                     </div>
                     <ul className="space-y-3">
-                      {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start text-sm">
-                          <svg className="text-primary mr-2 mt-0.5 w-4 h-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                          <span className="text-muted-foreground">{feature}</span>
-                        </li>
-                      ))}
+                      {plan.features.map((feature, featureIndex) => {
+                        const isComingSoon = feature.includes("(Coming Soon)");
+                        return (
+                          <li key={featureIndex} className={`flex items-start text-sm ${isComingSoon ? 'opacity-50' : ''}`}>
+                            <svg className={`mr-2 mt-0.5 w-4 h-4 ${isComingSoon ? 'text-muted-foreground' : 'text-primary animate-pulse'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span className={isComingSoon ? 'text-muted-foreground/70 italic' : 'text-muted-foreground'}>{feature}</span>
+                          </li>
+                        );
+                      })}
                     </ul>
                   </CardContent>
                   <CardFooter>
