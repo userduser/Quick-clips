@@ -275,6 +275,12 @@
       inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
   
+  /* Mobile menu blur with webkit prefix support */
+  .mobile-menu-blur {
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+  }
+  
   /* Fix for gradient text rendering */
   .bg-clip-text {
     -webkit-background-clip: text;
