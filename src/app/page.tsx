@@ -23,12 +23,12 @@ import { PageHeader } from "~/components/page-header";
 const subscriptionPlans = [
   {
     title: "Essential",
-    price: "$9",
-    yearlyPrice: "$90",
+    price: "$6.49",
+    yearlyPrice: "$49.99",
     description: "Perfect for content creators getting started",
     features: [
-      "10 video uploads per month",
-      "Up to 100 clips generated", 
+      "Up to 100 hours of video uploads per month",
+      "Up to 1000 clips per month", 
       "AI-powered clip generation", 
       "Auto-captions and subtitles",
       "720p video exports",
@@ -37,26 +37,25 @@ const subscriptionPlans = [
     ],
     buttonText: "Start Essential",
     isPopular: false,
-    maxVideos: "10 videos • 100 clips/month",
+    maxVideos: "100 hours • 1000 clips/month",
   },
   {
     title: "Premium", 
-    price: "$29",
-    yearlyPrice: "$290",
+    price: "$14.49",
+    yearlyPrice: "$119.49",
     description: "Most popular for regular creators and teams",
     features: [
-      "50 video uploads per month",
-      "Up to 500 clips generated",
+      "200 hours of video uploads per month",
+      "Unlimited clips per month",
       "Advanced AI clip selection",
       "Custom branding and watermarks", 
-      "1080p video exports",
-      "Advanced analytics dashboard",
       "Priority support",
-      "Bulk export tools"
+      "Auto upload to social media (Coming Soon)",
+      "Plus all Essential features"
     ],
     buttonText: "Start Premium",
     isPopular: true,
-    maxVideos: "50 videos • 500 clips/month",
+    maxVideos: "200 hours • Unlimited clips/month",
   },
   {
     title: "Enterprise",
@@ -64,7 +63,7 @@ const subscriptionPlans = [
     yearlyPrice: "Contact us",
     description: "For agencies, studios, and large teams",
     features: [
-      "Unlimited video uploads",
+      "Unlimited video upload hours",
       "Unlimited clips generated",
       "White-label solution",
       "API access for integrations",
@@ -75,7 +74,7 @@ const subscriptionPlans = [
     ],
     buttonText: "Contact Sales",
     isPopular: false,
-    maxVideos: "Unlimited videos & clips",
+    maxVideos: "Unlimited hours & clips",
   },
 ];
 
@@ -382,7 +381,7 @@ export default function HomePage() {
                         {getBillingInfo()}
                         {isAnnual && (
                           <span className="ml-2 inline-flex items-center px-2 py-1 rounded-full text-xs bg-primary/10 text-primary animate-pulse">
-                            Save 25%
+                            Save 30%
                           </span>
                         )}
                       </div>

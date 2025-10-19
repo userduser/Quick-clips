@@ -213,7 +213,7 @@ const QuickClipsLogo = ({ variant = "full", className = "", href = "/" })=>{
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                     width: "23",
-                    height: "auto",
+                    height: "32",
                     viewBox: "0 0 149 208",
                     className: "flex-shrink-0",
                     style: {
@@ -377,14 +377,10 @@ function LoginModal() {
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: `fixed inset-0 z-50 flex items-center justify-center p-4 modal-overlay ${isClosing ? 'closing' : ''}`,
+        className: `fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 modal-overlay ${isClosing ? 'closing' : ''}`,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute inset-0 bg-black/50 backdrop-blur-md",
-                style: {
-                    backdropFilter: 'blur(12px)',
-                    WebkitBackdropFilter: 'blur(12px)'
-                },
+                className: "absolute inset-0 bg-black/60 backdrop-blur-xl",
                 onClick: closeModal
             }, void 0, false, {
                 fileName: "[project]/src/components/auth/login-modal.tsx",
@@ -392,76 +388,76 @@ function LoginModal() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: `relative w-full max-w-md modal-content ${isClosing ? 'closing' : ''}`,
+                className: `relative w-full max-w-[95%] sm:max-w-md modal-content ${isClosing ? 'closing' : ''}`,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 bg-gradient-to-r from-primary/30 via-primary/20 to-primary/30 rounded-2xl blur-xl"
                     }, void 0, false, {
                         fileName: "[project]/src/components/auth/login-modal.tsx",
-                        lineNumber: 77,
+                        lineNumber: 76,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "relative glass-card shadow-glow border border-primary/30 rounded-2xl overflow-hidden animate-float",
+                        className: "relative glass-card shadow-glow border border-primary/30 rounded-2xl overflow-hidden",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 onClick: closeModal,
-                                className: "absolute top-4 right-4 z-10 p-2 rounded-full bg-background/80 hover:bg-background transition-colors",
+                                className: "absolute top-3 right-3 sm:top-4 sm:right-4 z-10 p-2 rounded-full bg-background/80 hover:bg-background transition-colors",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
                                     className: "w-4 h-4"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/auth/login-modal.tsx",
-                                    lineNumber: 86,
+                                    lineNumber: 85,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/auth/login-modal.tsx",
-                                lineNumber: 82,
+                                lineNumber: 81,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "px-8 pt-8 pb-2 text-center",
+                                className: "px-6 sm:px-8 pt-6 sm:pt-8 pb-2 text-center",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "inline-block mb-6",
+                                        className: "inline-block mb-4 sm:mb-6",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$logo$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                             fileName: "[project]/src/components/auth/login-modal.tsx",
-                                            lineNumber: 92,
+                                            lineNumber: 91,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/auth/login-modal.tsx",
-                                        lineNumber: 91,
+                                        lineNumber: 90,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                        className: "text-2xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent",
+                                        className: "text-xl sm:text-2xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent",
                                         children: "Welcome back"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/auth/login-modal.tsx",
-                                        lineNumber: 94,
+                                        lineNumber: 93,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-muted-foreground/80 mt-2",
+                                        className: "text-sm sm:text-base text-muted-foreground/80 mt-2",
                                         children: "Sign in to your Quick Clips account"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/auth/login-modal.tsx",
-                                        lineNumber: 97,
+                                        lineNumber: 96,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/auth/login-modal.tsx",
-                                lineNumber: 90,
+                                lineNumber: 89,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
                                 onSubmit: handleSubmit(onSubmit),
-                                className: "px-8 pb-8",
+                                className: "px-6 sm:px-8 pb-6 sm:pb-8",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "space-y-4",
+                                        className: "space-y-3 sm:space-y-4",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "space-y-2",
@@ -472,7 +468,7 @@ function LoginModal() {
                                                         children: "Email"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/auth/login-modal.tsx",
-                                                        lineNumber: 106,
+                                                        lineNumber: 105,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -484,7 +480,7 @@ function LoginModal() {
                                                         className: "bg-background/50 border-border/50 focus:border-primary/50 focus:ring-primary/20"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/auth/login-modal.tsx",
-                                                        lineNumber: 109,
+                                                        lineNumber: 108,
                                                         columnNumber: 17
                                                     }, this),
                                                     errors.email && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -494,20 +490,20 @@ function LoginModal() {
                                                                 className: "w-1 h-1 bg-red-400 rounded-full"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/auth/login-modal.tsx",
-                                                                lineNumber: 119,
+                                                                lineNumber: 118,
                                                                 columnNumber: 21
                                                             }, this),
                                                             errors.email.message
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/auth/login-modal.tsx",
-                                                        lineNumber: 118,
+                                                        lineNumber: 117,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/auth/login-modal.tsx",
-                                                lineNumber: 105,
+                                                lineNumber: 104,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -519,7 +515,7 @@ function LoginModal() {
                                                         children: "Password"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/auth/login-modal.tsx",
-                                                        lineNumber: 126,
+                                                        lineNumber: 125,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -530,7 +526,7 @@ function LoginModal() {
                                                         className: "bg-background/50 border-border/50 focus:border-primary/50 focus:ring-primary/20"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/auth/login-modal.tsx",
-                                                        lineNumber: 129,
+                                                        lineNumber: 128,
                                                         columnNumber: 17
                                                     }, this),
                                                     errors.password && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -540,43 +536,43 @@ function LoginModal() {
                                                                 className: "w-1 h-1 bg-red-400 rounded-full"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/auth/login-modal.tsx",
-                                                                lineNumber: 138,
+                                                                lineNumber: 137,
                                                                 columnNumber: 21
                                                             }, this),
                                                             errors.password.message
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/auth/login-modal.tsx",
-                                                        lineNumber: 137,
+                                                        lineNumber: 136,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/auth/login-modal.tsx",
-                                                lineNumber: 125,
+                                                lineNumber: 124,
                                                 columnNumber: 15
                                             }, this),
                                             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "rounded-lg bg-red-500/10 border border-red-500/20 p-4 text-sm text-red-400 flex items-center gap-3",
+                                                className: "rounded-lg bg-red-500/10 border border-red-500/20 p-3 sm:p-4 text-sm text-red-400 flex items-center gap-3",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "w-2 h-2 bg-red-500 rounded-full animate-pulse"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/auth/login-modal.tsx",
-                                                        lineNumber: 146,
+                                                        lineNumber: 145,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         children: error
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/auth/login-modal.tsx",
-                                                        lineNumber: 147,
+                                                        lineNumber: 146,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/auth/login-modal.tsx",
-                                                lineNumber: 145,
+                                                lineNumber: 144,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -589,7 +585,7 @@ function LoginModal() {
                                                             className: "w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin mr-2"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/auth/login-modal.tsx",
-                                                            lineNumber: 158,
+                                                            lineNumber: 157,
                                                             columnNumber: 21
                                                         }, this),
                                                         "Logging in..."
@@ -597,24 +593,24 @@ function LoginModal() {
                                                 }, void 0, true) : "Log in"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/auth/login-modal.tsx",
-                                                lineNumber: 151,
+                                                lineNumber: 150,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/auth/login-modal.tsx",
-                                        lineNumber: 104,
+                                        lineNumber: 103,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "mt-6 text-center text-sm border-t border-border/30 pt-6",
+                                        className: "mt-4 sm:mt-6 text-center text-sm border-t border-border/30 pt-4 sm:pt-6",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "text-muted-foreground",
                                                 children: "Don't have an account? "
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/auth/login-modal.tsx",
-                                                lineNumber: 169,
+                                                lineNumber: 168,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -624,17 +620,17 @@ function LoginModal() {
                                                 children: "Sign up"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/auth/login-modal.tsx",
-                                                lineNumber: 170,
+                                                lineNumber: 169,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/auth/login-modal.tsx",
-                                        lineNumber: 168,
+                                        lineNumber: 167,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "mt-4 text-center text-xs text-muted-foreground/70",
+                                        className: "mt-3 sm:mt-4 text-center text-xs text-muted-foreground/70",
                                         children: [
                                             "By continuing, you agree to Quick Clips's",
                                             " ",
@@ -645,7 +641,7 @@ function LoginModal() {
                                                 children: "Terms of Service"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/auth/login-modal.tsx",
-                                                lineNumber: 182,
+                                                lineNumber: 181,
                                                 columnNumber: 15
                                             }, this),
                                             ".",
@@ -659,32 +655,32 @@ function LoginModal() {
                                                 children: "Privacy Policy"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/auth/login-modal.tsx",
-                                                lineNumber: 187,
+                                                lineNumber: 186,
                                                 columnNumber: 15
                                             }, this),
                                             "."
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/auth/login-modal.tsx",
-                                        lineNumber: 180,
+                                        lineNumber: 179,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/auth/login-modal.tsx",
-                                lineNumber: 103,
+                                lineNumber: 102,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/auth/login-modal.tsx",
-                        lineNumber: 80,
+                        lineNumber: 79,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/auth/login-modal.tsx",
-                lineNumber: 75,
+                lineNumber: 74,
                 columnNumber: 7
             }, this)
         ]
@@ -816,14 +812,10 @@ function SignupModal() {
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: `fixed inset-0 z-50 flex items-center justify-center p-4 modal-overlay ${isClosing ? 'closing' : ''}`,
+        className: `fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 modal-overlay ${isClosing ? 'closing' : ''}`,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute inset-0 bg-black/50 backdrop-blur-md",
-                style: {
-                    backdropFilter: 'blur(12px)',
-                    WebkitBackdropFilter: 'blur(12px)'
-                },
+                className: "absolute inset-0 bg-black/60 backdrop-blur-xl",
                 onClick: closeModal
             }, void 0, false, {
                 fileName: "[project]/src/components/auth/signup-modal.tsx",
@@ -831,79 +823,79 @@ function SignupModal() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: `relative w-full max-w-md modal-content ${isClosing ? 'closing' : ''}`,
+                className: `relative w-full max-w-[95%] sm:max-w-md modal-content ${isClosing ? 'closing' : ''}`,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 bg-gradient-to-r from-primary/35 via-primary/25 to-primary/35 rounded-2xl blur-xl"
                     }, void 0, false, {
                         fileName: "[project]/src/components/auth/signup-modal.tsx",
-                        lineNumber: 84,
+                        lineNumber: 83,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "relative glass-card shadow-glow border border-primary/35 rounded-2xl overflow-hidden animate-float",
+                        className: "relative glass-card shadow-glow border border-primary/35 rounded-2xl overflow-hidden",
                         style: {
                             animationDelay: '0.3s'
                         },
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 onClick: closeModal,
-                                className: "absolute top-4 right-4 z-10 p-2 rounded-full bg-background/80 hover:bg-background transition-colors",
+                                className: "absolute top-3 right-3 sm:top-4 sm:right-4 z-10 p-2 rounded-full bg-background/80 hover:bg-background transition-colors",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
                                     className: "w-4 h-4"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                    lineNumber: 93,
+                                    lineNumber: 92,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                lineNumber: 89,
+                                lineNumber: 88,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "px-8 pt-8 pb-2 text-center",
+                                className: "px-6 sm:px-8 pt-6 sm:pt-8 pb-2 text-center",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "inline-block mb-6",
+                                        className: "inline-block mb-4 sm:mb-6",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$logo$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                             fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                            lineNumber: 99,
+                                            lineNumber: 98,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                        lineNumber: 98,
+                                        lineNumber: 97,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                        className: "text-2xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent",
+                                        className: "text-xl sm:text-2xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent",
                                         children: "Get started today"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                        lineNumber: 101,
+                                        lineNumber: 100,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-muted-foreground/80 mt-2",
+                                        className: "text-sm sm:text-base text-muted-foreground/80 mt-2",
                                         children: "Create your Quick Clips account and start making viral clips"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                        lineNumber: 104,
+                                        lineNumber: 103,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                lineNumber: 97,
+                                lineNumber: 96,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
                                 onSubmit: handleSubmit(onSubmit),
-                                className: "px-8 pb-8",
+                                className: "px-6 sm:px-8 pb-6 sm:pb-8",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "space-y-4",
+                                        className: "space-y-3 sm:space-y-4",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "space-y-2",
@@ -914,7 +906,7 @@ function SignupModal() {
                                                         children: "Email"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                                        lineNumber: 113,
+                                                        lineNumber: 112,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -926,7 +918,7 @@ function SignupModal() {
                                                         className: "bg-background/50 border-border/50 focus:border-primary/50 focus:ring-primary/20"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                                        lineNumber: 116,
+                                                        lineNumber: 115,
                                                         columnNumber: 17
                                                     }, this),
                                                     errors.email && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -936,20 +928,20 @@ function SignupModal() {
                                                                 className: "w-1 h-1 bg-red-400 rounded-full"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                                                lineNumber: 126,
+                                                                lineNumber: 125,
                                                                 columnNumber: 21
                                                             }, this),
                                                             errors.email.message
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                                        lineNumber: 125,
+                                                        lineNumber: 124,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                                lineNumber: 112,
+                                                lineNumber: 111,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -961,7 +953,7 @@ function SignupModal() {
                                                         children: "Password"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                                        lineNumber: 133,
+                                                        lineNumber: 132,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -972,7 +964,7 @@ function SignupModal() {
                                                         className: "bg-background/50 border-border/50 focus:border-primary/50 focus:ring-primary/20"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                                        lineNumber: 136,
+                                                        lineNumber: 135,
                                                         columnNumber: 17
                                                     }, this),
                                                     errors.password && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -982,20 +974,20 @@ function SignupModal() {
                                                                 className: "w-1 h-1 bg-red-400 rounded-full"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                                                lineNumber: 145,
+                                                                lineNumber: 144,
                                                                 columnNumber: 21
                                                             }, this),
                                                             errors.password.message
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                                        lineNumber: 144,
+                                                        lineNumber: 143,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                                lineNumber: 132,
+                                                lineNumber: 131,
                                                 columnNumber: 15
                                             }, this),
                                             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1005,20 +997,20 @@ function SignupModal() {
                                                         className: "w-2 h-2 bg-red-500 rounded-full animate-pulse"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                                        lineNumber: 153,
+                                                        lineNumber: 152,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         children: error
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                                        lineNumber: 154,
+                                                        lineNumber: 153,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                                lineNumber: 152,
+                                                lineNumber: 151,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1031,7 +1023,7 @@ function SignupModal() {
                                                             className: "w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin mr-2"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                                            lineNumber: 165,
+                                                            lineNumber: 164,
                                                             columnNumber: 21
                                                         }, this),
                                                         "Signing up..."
@@ -1039,24 +1031,24 @@ function SignupModal() {
                                                 }, void 0, true) : "Sign up"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                                lineNumber: 158,
+                                                lineNumber: 157,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                        lineNumber: 111,
+                                        lineNumber: 110,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "mt-6 text-center text-sm border-t border-border/30 pt-6",
+                                        className: "mt-4 sm:mt-6 text-center text-sm border-t border-border/30 pt-4 sm:pt-6",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "text-muted-foreground",
                                                 children: "Already have an account? "
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                                lineNumber: 176,
+                                                lineNumber: 175,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1066,17 +1058,17 @@ function SignupModal() {
                                                 children: "Sign in"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                                lineNumber: 177,
+                                                lineNumber: 176,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                        lineNumber: 175,
+                                        lineNumber: 174,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "mt-4 text-center text-xs text-muted-foreground/70",
+                                        className: "mt-3 sm:mt-4 text-center text-xs text-muted-foreground/70",
                                         children: [
                                             "By continuing, you agree to Quick Clips's",
                                             " ",
@@ -1087,7 +1079,7 @@ function SignupModal() {
                                                 children: "Terms of Service"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                                lineNumber: 189,
+                                                lineNumber: 188,
                                                 columnNumber: 15
                                             }, this),
                                             ".",
@@ -1101,32 +1093,32 @@ function SignupModal() {
                                                 children: "Privacy Policy"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                                lineNumber: 194,
+                                                lineNumber: 193,
                                                 columnNumber: 15
                                             }, this),
                                             "."
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                        lineNumber: 187,
+                                        lineNumber: 186,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/auth/signup-modal.tsx",
-                                lineNumber: 110,
+                                lineNumber: 109,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/auth/signup-modal.tsx",
-                        lineNumber: 87,
+                        lineNumber: 86,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/auth/signup-modal.tsx",
-                lineNumber: 82,
+                lineNumber: 81,
                 columnNumber: 7
             }, this)
         ]
@@ -1424,30 +1416,21 @@ __turbopack_context__.s({
     "Providers": (()=>Providers)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next-auth/react.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$auth$2f$auth$2d$modal$2d$provider$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/auth/auth-modal-provider.tsx [app-client] (ecmascript)");
 "use client";
 ;
 ;
-;
 function Providers({ children }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SessionProvider"], {
-        basePath: "/api/auth",
-        refetchInterval: 0,
-        refetchOnWindowFocus: false,
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             children,
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$auth$2f$auth$2d$modal$2d$provider$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AuthModalProvider"], {}, void 0, false, {
                 fileName: "[project]/src/components/providers.tsx",
-                lineNumber: 14,
+                lineNumber: 9,
                 columnNumber: 7
             }, this)
         ]
-    }, void 0, true, {
-        fileName: "[project]/src/components/providers.tsx",
-        lineNumber: 8,
-        columnNumber: 5
-    }, this);
+    }, void 0, true);
 }
 _c = Providers;
 var _c;

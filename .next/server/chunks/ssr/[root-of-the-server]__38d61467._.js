@@ -73,7 +73,7 @@ const env = {
     S3_BUCKET_NAME: process.env.S3_BUCKET_NAME || "mock-bucket",
     PROCESS_VIDEO_ENDPOINT: process.env.PROCESS_VIDEO_ENDPOINT || "https://mock-endpoint.com",
     PROCESS_VIDEO_ENDPOINT_AUTH: process.env.PROCESS_VIDEO_ENDPOINT_AUTH || "mock-auth",
-    NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ("TURBOPACK compile-time value", "pk_test_dummy_key") || "pk_test_mock",
+    NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || "pk_test_mock",
     STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY || "sk_test_mock",
     STRIPE_SMALL_CREDIT_PACK: process.env.STRIPE_SMALL_CREDIT_PACK || "price_mock",
     STRIPE_MEDIUM_CREDIT_PACK: process.env.STRIPE_MEDIUM_CREDIT_PACK || "price_mock",

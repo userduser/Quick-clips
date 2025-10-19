@@ -2,12 +2,16 @@
   "node": {
     "4003d9949bb8b565b282c5a782323ff2bd64a7bd43": {
       "workers": {
-        "app/_not-found/page": {
-          "moduleId": "[project]/.next-internal/server/app/_not-found/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+        "app/about/page": {
+          "moduleId": "[project]/.next-internal/server/app/about/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
         },
-        "app/page": {
-          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+        "app/affiliate/page": {
+          "moduleId": "[project]/.next-internal/server/app/affiliate/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/contact/page": {
+          "moduleId": "[project]/.next-internal/server/app/contact/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false
         },
         "app/privacy/page": {
@@ -20,8 +24,9 @@
         }
       },
       "layer": {
-        "app/_not-found/page": "action-browser",
-        "app/page": "action-browser",
+        "app/about/page": "action-browser",
+        "app/affiliate/page": "action-browser",
+        "app/contact/page": "action-browser",
         "app/privacy/page": "action-browser",
         "app/terms/page": "action-browser"
       }

@@ -65,8 +65,8 @@ export function MobileNav() {
       <div 
         className={`
           mobile-menu-blur
-          fixed top-16 w-64 h-[calc(100vh-4rem)] 
-          bg-black/70
+          fixed top-16 w-64 h-fit pb-6 rounded-bl-xl 
+          bg-card
           border-l border-border/40 shadow-2xl z-50 md:hidden
           ${isOpen ? "right-0" : "-right-64"}
         `}

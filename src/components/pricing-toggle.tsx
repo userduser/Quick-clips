@@ -69,7 +69,7 @@ export function PricingToggle({ isAnnual, onToggle }: PricingToggleProps) {
             : 'bg-primary/20 text-primary/70 scale-95 opacity-70'
           }
         `}>
-          Save 25%
+          Save 30%
         </div>
       </div>
     </div>
