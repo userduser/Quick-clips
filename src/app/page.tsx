@@ -458,44 +458,6 @@ export default function HomePage() {
             ))}
           </div>
           
-          {/* Pricing Comparison Section */}
-          <ScrollReveal direction="up" delay={450}>
-            <div className="mt-16 max-w-4xl mx-auto">
-              <div className="glass-card shadow-glow rounded-xl p-8 border-2 border-primary/20">
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold mb-2">
-                    <span className="text-primary">Most Affordable</span> in the Industry
-                  </h3>
-                  <p className="text-muted-foreground">
-                    We're literally the cheapest. Our competitors charge 3-5x more for similar features.
-                  </p>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                  <div className="text-center p-4 bg-background/50 rounded-lg border border-border/40">
-                    <p className="text-sm text-muted-foreground mb-1">Competitor A</p>
-                    <p className="text-2xl font-bold text-muted-foreground line-through">$29/mo</p>
-                  </div>
-                  <div className="text-center p-4 bg-background/50 rounded-lg border border-border/40">
-                    <p className="text-sm text-muted-foreground mb-1">Competitor B</p>
-                    <p className="text-2xl font-bold text-muted-foreground line-through">$49/mo</p>
-                  </div>
-                  <div className="text-center p-4 bg-primary/10 rounded-lg border-2 border-primary shadow-glow">
-                    <p className="text-sm text-primary mb-1 font-semibold">Quick Clips</p>
-                    <p className="text-2xl font-bold text-primary">$6.49/mo</p>
-                    <p className="text-xs text-primary mt-1">✓ Best Value</p>
-                  </div>
-                </div>
-                
-                <div className="mt-6 text-center">
-                  <p className="text-sm text-muted-foreground">
-                    <span className="text-primary font-semibold">Save 80%</span> compared to industry alternatives • Same features, unbeatable price
-                  </p>
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
-          
           <ScrollReveal direction="up" delay={600}>
             <div className="text-center mt-12">
               <p className="text-sm text-muted-foreground mb-4">
